@@ -33,7 +33,7 @@
     <date>March/16/2004</date>
     <releaseinfo>&skim_version;-r&skim_doc_revision;</releaseinfo>
     <abstract>
-      <para>An input method platform based upon 
+      <para>An input method platform based upon
       <ulink url="http://scim.sourceforge.net">scim-lib</ulink> and all-in-one configure GUI.</para>
     </abstract>
     <keywordset>
@@ -52,9 +52,9 @@
     &skim; is an input method platform based upon scim-lib under *NIX (including
     <ulink url="http://www.gnu.org/gnu/the-gnu-project.html">GNU/Linux</ulink> and
     <ulink url="http://www.freebsd.org/">FreeBSD</ulink>)
-    systems optimized for &kde;. It provides a GUI panel (named scim-panel-kde), 
-    a KConfig config module and SetupUIs for itself and scim-lib. 
-    It also has its own plugin systems which support on-demand loadable actions. 
+    systems optimized for &kde;. It provides a GUI panel (named scim-panel-kde),
+    a KConfig config module and SetupUIs for itself and scim-lib.
+    It also has its own plugin systems which support on-demand loadable actions.
     </para>
     <sect1 id="features" >
       <title>Features</title>
@@ -62,34 +62,34 @@
       <listitem><para>
       KDE compliant:
       <itemizedlist>
-      <listitem><para>Default settings are retrieved from KDE and the GUI honors 
-      the KDE/Qt global styles, including but not limited to the apperances 
+      <listitem><para>Default settings are retrieved from KDE and the GUI honors
+      the KDE/Qt global styles, including but not limited to the apperances
       colors of widgets and icons;</para>
       </listitem>
-      <listitem><para>GUI language is determined by the KDE global setting, rather 
-      than LANG (or similar) environment variable, so no matter what your locale 
-      is, you can select preferrable user interface language. What's more, skim 
-      ships with a bunk of translations, currently including: (Simplified/Tranditional) 
+      <listitem><para>GUI language is determined by the KDE global setting, rather
+      than LANG (or similar) environment variable, so no matter what your locale
+      is, you can select preferrable user interface language. What's more, skim
+      ships with a bunk of translations, currently including: (Simplified/Tranditional)
       Chinese, French, German, Italian, Japanese, Korean and Punjabi.</para>
       </listitem>
       </itemizedlist>
       </para></listitem>
       <listitem><para>
-      Fully &kde; integration: if you close your &kde; when &skim; is still 
-      running (given that your KDE is configured to save session when logout), 
-      next time you login &kde;, &skim; will get loaded automatically; 
+      Fully &kde; integration: if you close your &kde; when &skim; is still
+      running (given that your KDE is configured to save session when logout),
+      next time you login &kde;, &skim; will get loaded automatically;
       After installation of &skim;, you can start it from "KDE Menu->Utilitis->&skim;"
       </para></listitem>
       <listitem><para>
-      Fully customizable: a setup GUI is shipped with &skim;, in which you can 
-      modify all settings not only about &skim; but also &scim; and most the 
+      Fully customizable: a setup GUI is shipped with &skim;, in which you can
+      modify all settings not only about &skim; but also &scim; and most the
       settings will take efforts immediately without the hassle of restart (now only
-      one rarely used configure can not be changed in &skim;, see also 
+      one rarely used configure can not be changed in &skim;, see also
       <xref linkend="faq-no-scim-settings"/>);
       </para></listitem>
       <listitem><para>
       Based on modular concept: nearly everything you see are in seperate plugins,
-      so you can configure which one you want. Not specified plugins would not get 
+      so you can configure which one you want. Not specified plugins would not get
       loaded at all to save your memery; some temporary functions such as configuration
       dialogs will be loaded on-demand, and will be unloaded automatically when they
       are no longer needed;
@@ -139,7 +139,7 @@
     </mediaobject>
     </sect1>
   </chapter>
- 
+
 &list;
 
 <chapter id="configuration">
@@ -216,7 +216,7 @@
 <title>Intelligent Pinyin - General</title>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration14.png" /></imageobject></mediaobject></screenshot>
 <para>The next settings are for the inputmethod   <guilabel>Intelligent Pinyin</guilabel> what is described in the directory <xref linkend="chinese" endterm="tit:chinese" />.</para>
-<para>Take again the example <quote>xie zhongwen wenjian 写中文文件</quote>. This input exist of the three parts <quote>xie 写</quote>, <quote>zhongwen 中文</quote> and <quote>wenjian 文件</quote>. If <guilabel>Auto combine phrase</guilabel> is switched on, then this three parts will be combined to the new phrase  <quote>写中文文件</quote> ,  this combination will be shown directly at the next input for to be choosen. This is practical with names like for example <quote>汉堡中德协会青年会</quote> to be connected with each other, because then it is not needed to collect the seperated parts.</para>
+<para>Take again the example <quote>xie zhongwen wenjian åäž­ææä»¶</quote>. This input exist of the three parts <quote>xie å</quote>, <quote>zhongwen äž­æ</quote> and <quote>wenjian æä»¶</quote>. If <guilabel>Auto combine phrase</guilabel> is switched on, then this three parts will be combined to the new phrase  <quote>åäž­ææä»¶</quote> ,  this combination will be shown directly at the next input for to be choosen. This is practical with names like for example <quote>æ±å ¡äž­åŸ·åäŒéå¹ŽäŒ</quote> to be connected with each other, because then it is not needed to collect the seperated parts.</para>
 <para>If  <guilabel>Match longer phrase</guilabel> is switched on, then will a uncomplete input extended to a complete valid expression.</para>
 <para>If <guilabel>Show all keys</guilabel>.is switched on, should all entered but not yet converted characters be shown, or only the characters who belongs to the last expression.</para>
 <para>If <guilabel>Dynamic adjust</guilabel> is switched on, then will the latest used expression put higher on the list the next time.</para>
@@ -231,7 +231,7 @@
 <title>Intelligent Pinyin - Pinyin</title>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration16.png" /></imageobject></mediaobject></screenshot>
 <para>If <guilabel>Use tone</guilabel> is switched on , then will the information from the tones from the independent syllables used at the converting. The information from the tones are keyed in with an American keyboard with <keycombo action="simul">&Shift;<keycap><replaceable>Zahl</replaceable></keycap></keycombo> , also as <keycap>!</keycap>, <keycap>"</keycap>, <keycap>#</keycap> and <keycap>$</keycap>. Normally are the intelligent selection algorithms without tone good enough.</para>
-<para>It is far more practical to switch on the option <guilabel>Allow incomplete  Pinyin</guilabel>. When switched on, it is enough to key in the initial sound of each syllable, for example  <quote>xzhwwj</quote> for <quote>写中文文件</quote>.</para>
+<para>It is far more practical to switch on the option <guilabel>Allow incomplete  Pinyin</guilabel>. When switched on, it is enough to key in the initial sound of each syllable, for example  <quote>xzhwwj</quote> for <quote>åäž­ææä»¶</quote>.</para>
 <para>Also you can decide, that you want to switch on <guilabel>Ambiguities</guilabel> , if it is differcult to hear the difference between the close related sounds from the official Chinese language.</para>
 </section>
 <section id="intelligentespinyin3">
@@ -282,7 +282,7 @@
 <title id="tit:chinese">Input Chinesischer characters with &skim;</title>
 <para>You can start a program with <userinput>CN <command><replaceable>Programmname</replaceable></command></userinput>, for example
 <screen><prompt>%</prompt><userinput>CN <command>mozilla</command></userinput></screen>
-for to start the webbrowser Mozilla. Wenn Sie <keycombo action="simul">&Ctrl;<keycap>Space bar</keycap></keycombo> drücken, sollte folgende Symbolleiste erscheinen:</para>
+for to start the webbrowser Mozilla. Wenn Sie <keycombo action="simul">&Ctrl;<keycap>Space bar</keycap></keycombo> drÃŒcken, sollte folgende Symbolleiste erscheinen:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar1.png" /></imageobject></mediaobject></screenshot>
 <para>When  <guilabel>Intelligent Pinyin</guilabel> not already automaticly is preset as input method, Make it just your choise from the list, that appears, after you have clicked on the name of  the input method, for example like this:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_choose_ime.png" /></imageobject></mediaobject></screenshot>
@@ -293,7 +293,7 @@ for to start the webbrowser Mozilla. Wenn Sie <keycombo action="simul">&Ctrl;<ke
 <para>With a <keycap>1</keycap> you choose the correct way of writing. As alternative you can insert the bleu underlined correct spelling in your text with the space bar .... With skim you can also put in longer word chains or even xomplete sentences. You can try for example <quote>xiezhongwenwenjian</quote>:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim04a.png" /></imageobject></mediaobject></screenshot>
 <para>Here are already the right characters after each other.If that was not the case,then you could choose with <keycap>4</keycap> the first character, and then with a other number the both next ones, and so on.</para>
-<para>As you have seen in the example above, it is also possible with skim to input traditional characters. For to force to get only half width (or full width) proposed, just click on  <guilabel>中</guilabel>, until the right characterlenght is reached:</para>
+<para>As you have seen in the example above, it is also possible with skim to input traditional characters. For to force to get only half width (or full width) proposed, just click on  <guilabel>äž­</guilabel>, until the right characterlenght is reached:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar3.png" /></imageobject></mediaobject></screenshot>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar4.png" /></imageobject></mediaobject></screenshot>
 <para>With the other buttons you can set, that the space bar a half character or a full character is showing:</para>
@@ -302,70 +302,596 @@ for to start the webbrowser Mozilla. Wenn Sie <keycombo action="simul">&Ctrl;<ke
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar8.png" /></imageobject></mediaobject></screenshot>
 </chapter>
 
-<!--
+<chapter id="background">
+ <title>Background of some East Asian input method's</title>
 <sect1>
-    <title>Background of some East Asian input method's</title>
-    <para>
-
-
-
-korean-:
-ko-han2
-http://en.wikipedia.org/wiki/Hanja
-ko-romaja
-korean
-
-japanese-:
-anthy
-canna
-ja-anthy
-ja-tcode
-ja-trycode
-SKK
-
-chinese-simplified-:
-zh-pinyin
-zh-py
-zh-pu-gb
-zh-bopomofo
-zh-tonepy-gb
-zh-quick
-zh-py-b5
-zh-tonepy-b5
-zh-tonepy
-zh-cangjie
-smart-pingyin
-erbi
-erbi-qs
-wubi
-http://www.emacswiki.org/emacs/WritingChineseWithWuBi
-
-ziranma
-
-chinese-traditional-:
-wu
-http://wu-chinese.com/web/
-array30
-cns11643
-cangjie
-cangjie 3
-cangjie 5
-canton HK
-cantonese pingyin
-dayi3
-easy big
-jyutping
-quick
-symplex
-stroke 5
-zhuyin
-zhuyinbig
-
+<title>Korean</title>
+<sect2>
+ <title>ko-hanja</title>
+<para>
+This input method is used for to input Chinese signs (used in Korea and called Hanja) with a Korean keyboard.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Hanja/"><citetitle>Wikipedia.org/Hanja</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/"><citetitle>http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Hanja.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>hangul</title>
+<para>
+This input method is used for to input Korean signs (called Hangul) with a Korean keyboard.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Hangul/"><citetitle>wikipedia.org/wiki/Hangul</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/"><citetitle>http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/</citetitle></ulink>
+This input method is supported by a scim-table and by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Hangul.bin</filename>
+and at
+<filename class='directory'>/usr/share/m17n/ko-han2.mim</filename>.
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/</citetitle></ulink>
+and at this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html/"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>ko romaja</title>
+<para>
+This input method is used for to input Korean signs with an Alphabet-keyboard.
+The words are typed in as a transcription of the Korean sign (according to the Romaja pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Korean character.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Romanization_of_Korean/"><citetitle>wikipedia.org/wiki/Romanization_of_Korean</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/"><citetitle>http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/</citetitle></ulink>
+on wikipedia.
+This input method is supported by a scim-table and by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/HangulRomaja.bin</filename>
+and at
+<filename class='directory'>/usr/share/m17n/ko-romaja.mim</filename>.
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/</citetitle></ulink>
+and at this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html/"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
 </sect1>
--->
-
-
-
+<sect1>
+<title>Japanese</title>
+<sect2>
+<title>Hiragana</title>
+<para>
+This input method is used for to input Japanese Hiragana signs with an Alphabet keyboard.
+The words are typed in as a transcription of the Japanese sign, when ready, this will be looked up in a electronic dictionary and translated to a Japanese sign.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Hiragana"><citetitle>wikipedia.org/wiki/Hiragana</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://japanese.about.com/library/blhiragana.htm"><citetitle>http://japanese.about.com/library/blhiragana.htm/</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Hiragana.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>Katakana</title>
+<para>
+This input method is used for to input Japanese Katakana signs with an Alphabet keyboard.
+The words are typed in as a transcription of the Japanese sign, when ready, this will be looked up in a electronic dictionary and translated to a Japanese sign.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Katakana"><citetitle>wikipedia.org/wiki/Katakana</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://japanese.about.com/library/blkatakana1.htm"><citetitle>http://japanese.about.com/library/blkatakana1.htm/</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Katakana.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>Nippon</title>
+<para>
+This input method is used for to input Japanese Kanji signs with an Alphabet keyboard. or with Kana
+The words are typed in as a transcription of the Japanese sign, when ready, this will be looked up in a electronic dictionary and translated to a Japanese sign.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Kanji"><citetitle>wikipedia.org/wiki/Kanji</citetitle></ulink>
+on wikipedia.
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Nippon.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/</citetitle></ulink>
+The table contains 6,355 signs and is made with information from this website:
+<ulink url="http://www.csse.monash.edu.au/~jwb/kanjidic.html"><citetitle>www.csse.monash.edu.au/~jwb/kanjidic.htm</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>ja-anty</title>
+<para>
+This input method is used for to input Japanese Katakana signs with an Alphabet keyboard.
+The words are typed in as a transcription of the Japanese sign, when ready, this will be looked up in a electronic dictionary and translated to a Japanese Hiragana sign,
+this will then translated from Hiragana to a Kanji-Hiragana mixed sequence
+For more information, see this page
+<ulink url="http://sourceforge.jp/projects/anthy/"><citetitle>sourceforge.jp/projects/anthy</citetitle></ulink>
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/ja-anthy.mim</filename>
+The source-file can be found on this website
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html/"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>ja-tcode</title>
+<para>
+For more information, see this page in Japanese
+<ulink url="http://openlab.jp/tcode/"><citetitle>openlab.jp/tcode/</citetitle></ulink>
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/ja-tcode.mim</filename>
+The source-file can be found on this website
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>ja-trycode</title>
+<para>
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/ja-trycode.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Chinese-simplified</title>
+<sect2>
+<title>erbi</title>
+<para>
+For more information, see this page in Chinese
+<ulink url="http://zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95"><citetitle>zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Erbi.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>erbi-qs</title>
+<para>
+For more information, see this page in Chinese
+<ulink url="http://zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95"><citetitle>zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Erbi-QS.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>SmartCangjie6</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals), which are then selected.
+The Cangjie input method is commonly said to have gone through 6 generations (commonly referred to as “versions” in English), each of which slightly incompatible with the other.
+This version is generation 6.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+on wikipedia, or on this page
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+or on this page in Chinese
+<ulink url="http://www.scj2000.net"><citetitle>http://www.scj2000.net/</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/SmartCangJie6.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>wubi</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard or a Chinese keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals) which are selected with the keyboard following the order in which they are written by hand
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Wubi_method"><citetitle>wikipedia.org/wiki/Wubi_method</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://www.emacswiki.org/emacs/WritingChineseWithWuBi/"><citetitle>WritingChineseWithWuBi</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Wubi.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>ziranma</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+This  system claims to use only 2 keys on the keyboard and should be easy to learn.
+For more information, see this page
+<ulink url="http://eyegene.ophthy.med.umich.edu/unicode/KeyboardLayouts/ZiRanMaPinYinKeyboard.html"><citetitle>KeyboardLayouts/ZiRanMaPinYinKeyboard</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Ziranma.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-bopomofo</title>
+<para>
+This input method is used for to input Bopomofo signs with a Chinese keyboard.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Bopomofo"><citetitle>wikipedia.org/wiki/Bopomofo</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-bopomofo.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-cangjie</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals), which are then selected.
+The Cangjie input method is commonly said to have gone through 6 generations (commonly referred to as “versions” in English), each of which slightly incompatible with the other.
+This version is generation one.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+on wikipedia, or on this page
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-cangjie.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-pinyin</title>
+<para>
+This input method is used for to input Pinyin (writing Chinese in alphabet transcription), this will then not translated to characters.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin"><citetitle>wikipedia.org/wiki/Pinyin</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-pinyin.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-py</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are alphabetically sorted.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-py.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>zh-py-gb</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are alphabetically sorted., the result will not be coded in UTF-8 but in GB_2312.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+and on
+<ulink url="http://en.wikipedia.org/wiki/GB_2312"><citetitle>wikipedia.org/wiki/GB_2312</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-py-gb.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-py-b5</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are alphabetically sorted., the result will not be coded in UTF-8 but in BIG-5.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+and on
+<ulink url="http://en.wikipedia.org/wiki/Big5"><citetitle>wikipedia.org/wiki/Big5</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-py-b5.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-tonepy</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are not only alphabetically sorted, but is also sorted according to the tone.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-tonepy.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>zh-tonepy-b5</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are not only alphabetically sorted, but is also sorted according to the tone.
+The result will not be coded in UTF-8 but in BIG-5.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+and on
+<ulink url="http://en.wikipedia.org/wiki/Big5"><citetitle>wikipedia.org/wiki/Big5</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-tonepy-b5.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>zh-tonepy-gb</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Pinyin pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are not only alphabetically sorted, but is also sorted according to the tone.
+The result will not be coded in UTF-8 but in GB_2312.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+and on
+<ulink url="http://en.wikipedia.org/wiki/GB_2312"><citetitle>wikipedia.org/wiki/GB_2312</citetitle></ulink>
+on wikipedia
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/zh-tonepy-gb.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-quick</title>
+<para>
+This input method is supported by a m17n-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/m17n/quick.mim</filename>
+The source-file can be found on this website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Chinese-traditional</title>
+<sect2>
+<title>array30</title>
+<para>
+For more information, see this page
+<ulink url="http://scimarray.openfoundry.org/index_en.html"><citetitle>scimarray.openfoundry.org/index_en.html</citetitle></ulink>
+or this page (in Chinese)
+<ulink url="http://array30.sourceforge.net/"><citetitle>array30.sourceforge.net</citetitle></ulink>
+or this page (in Chinese)
+<ulink url="http://www.array.com.tw/"><citetitle>www.array.com.tw</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Array30.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cns11643</title>
+<para>
+For more information, see this page (in Chinese)
+<ulink url="http://www.cmex.org.tw"><citetitle>http://www.cmex.org.tw</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/CNS11643.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cangjie</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals), which are then selected.
+The Cangjie input method is commonly said to have gone through 6 generations (commonly referred to as “versions” in English), each of which slightly incompatible with the other.
+This version is generation one..
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+on wikipedia, or on this page
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Cangjie.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cangjie 3</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals), which are then selected.
+The Cangjie input method is commonly said to have gone through 6 generations (commonly referred to as “versions” in English), each of which slightly incompatible with the other.
+This version is generation 3.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+on wikipedia, or on this page
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Cangjie3.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cangjie 5</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals), which are then selected.
+The Cangjie input method is commonly said to have gone through 6 generations (commonly referred to as “versions” in English), each of which slightly incompatible with the other.
+This version is generation 5.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+on wikipedia, or on this page
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Cangjie5.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>canton HK</title>
+<para>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/CantonHK.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cantonese pingyin</title>
+<para>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Cantonese.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>dayi3</title>
+<para>
+This input method is used for to input Chinese characters with an Alphabet keyboard or a Chinese keyboard.
+The Chinese signs are broken down to parts (many times similar to radicals) which are selected with the keyboard following the order in which they are written by hand
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Dayi_method"><citetitle>wikipedia.org/wiki/Dayi_method</citetitle></ulink>
+on wikipedia
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Dayi3.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>easy big</title>
+<para>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/EZ-Big.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>jyutping</title>
+<para>
+This input method is used for to input Cantonese characters with an Alphabet keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Jyutping pronounciation of Cantonese), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+The characters are alphabetically sorted.
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Jyutping"><citetitle>wikipedia.org/wiki/Jyutping</citetitle></ulink>
+on wikipedia
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Jyutping.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>quick</title>
+<para>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Quick.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>symplex</title>
+<para>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Simplex.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>stroke 5</title>
+<para>
+This input method is used for to input Chinese characters with a numerical keyboard or a Chinese keyboard.
+The Chinese signs are broken down to the form of the strokes  which are selected with the keyboard following the order in which they are written by hand
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Stroke_count_method"><citetitle>wikipedia.org/wiki/Stroke_count_method</citetitle></ulink>
+on wikipedia
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Stroke5.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>wu</title>
+<para>
+This input method is used for to input Chinese characters with  an Alphabet keyboard or a Chinese keyboard.
+The words are typed in as a transcription of the Chinese sign (according to the Shanghainese pronounciation), when ready, this will be looked up in a electronic dictionary and translated to a Chinese character.
+For more information, see this page (in Chinese)
+<ulink url="http://wu-chinese.com"><citetitle>wu-chinese.com</citetitle></ulink>
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/Wu.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zhuyin</title>
+<para>
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Zh%C3%B9y%C4%ABn_f%C3%BAh%C3%A0o"><citetitle>wikipedia.org/wiki/Zhuyin Fuhao</citetitle></ulink>
+on wikipedia
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/zhuyin.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="https://github.com/lukhnos/openvanilla-oranje"><citetitle>https://github.com/lukhnos/openvanilla-oranje</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zhuyinbig</title>
+<para>
+This is the extended version of zhuyin
+For more information, see this page
+<ulink url="http://en.wikipedia.org/wiki/Zh%C3%B9y%C4%ABn_f%C3%BAh%C3%A0o"><citetitle>wikipedia.org/wiki/Zhuyin Fuhao</citetitle></ulink>
+on wikipedia
+This input method is supported by a scim-table, which can be found on the local hardisk at
+<filename class='directory'>/usr/share/scim/tables/zhuyinbig.bin</filename>
+The source-file can be found on this website:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+The table  is made with information from this website:
+<ulink url="https://github.com/lukhnos/openvanilla-oranje"><citetitle>https://github.com/lukhnos/openvanilla-oranje</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+</chapter>
 <chapter id="installation" >
     <title>Installation</title>
     <sect1 id="how-to-obtain-skim" >
@@ -380,17 +906,17 @@ zhuyinbig
       <para>
       	&scim; >= &require_scim_version;, &Qt; >= 3.2.0 and &kde; >= 3.2.0 are required to run/compile &skim;.
       </para>
-      <note><title>Notice</title><para>After installing skim, you should also install at least an IMEngine 
+      <note><title>Notice</title><para>After installing skim, you should also install at least an IMEngine
       (refer to a input method), such as <emphasis>scim-chinese</emphasis>
-       (currently contains the Pinyin IMEngine for Simplified Chinese), 
+       (currently contains the Pinyin IMEngine for Simplified Chinese),
       <emphasis>scim-tables</emphasis> (contains
       table-based input methods, such as Wubi, Erbi for Simplified Chinese),
-      <emphasis>scim-hangul</emphasis> (a popular Korean input method), <emphasis>scim-uim</emphasis> (contains a lot of 
+      <emphasis>scim-hangul</emphasis> (a popular Korean input method), <emphasis>scim-uim</emphasis> (contains a lot of
       Janpanese IMEngines) or <emphasis>scim-m17n</emphasis> (contains more than 30 input methods for
       various languages).</para></note>
       <sect2 id="binary_requirements" >
       <title>Install (Binary) RPM</title>
-      <para>If you want to use RPM directly, then please install RPMs 
+      <para>If you want to use RPM directly, then please install RPMs
       for scim and skim.</para>
       </sect2>
       <sect2 id="compile_from_source_requirements" >
@@ -398,7 +924,7 @@ zhuyinbig
       <para>If you want to compile skim from source, then please make sure before
       compiling &skim; at least the RPMs for scim and scim-devel are installed.</para>
       <para>Otherwise, if &scim; was compiled in your box, you have all necessary files.</para>
-      <para>If you do not want Gtk2 based original GUI from scim-lib, you can disable them 
+      <para>If you do not want Gtk2 based original GUI from scim-lib, you can disable them
 	while configure it: after you compile it, you can still install &skim;.
 	In a word, &skim; does not depend on original Gtk2 based GUI.
       </para>
@@ -428,25 +954,25 @@ zhuyinbig
       <para>
       	Before you can use any XIM server in X, your environment must be setup.
       </para>
-      <para>First, for Gentoo users, edit the file ~/.xinitrc (if it does not exist, create one), 
+      <para>First, for Gentoo users, edit the file ~/.xinitrc (if it does not exist, create one),
       and modify it according to the sample below
       <screen><userinput>export XMODIFIERS=@im=SCIM</userinput>
 <userinput>export LC_CTYPE="zh_CN.GBK"</userinput>
 <userinput>export GTK_IM_MODULE=scim</userinput>
 <userinput>export QT_IM_MODULE=scim</userinput>
 <userinput><command>startkde</command></userinput></screen>
-      The 4th line is only necessary if your &Qt; is compiled with 
-      <ulink url="http://immodule-qt.freedesktop.org">qt-immodule</ulink> support and 
+      The 4th line is only necessary if your &Qt; is compiled with
+      <ulink url="http://immodule-qt.freedesktop.org">qt-immodule</ulink> support and
       <ulink url="http://scim.sf.net/">scim-qtimm</ulink> has been installed. Under Gentoo, please emerge latest Qt with USE="immqt-bc" (or USE="immqt" if you are
-      willing to recompile all your Qt based applications afterwards) and then emerge scim-qtimm. SuSE will include these by default in the upcoming version. 
+      willing to recompile all your Qt based applications afterwards) and then emerge scim-qtimm. SuSE will include these by default in the upcoming version.
       </para>
       <para>Please change the locale/encoding (zh_CN.GBK is used in the sample above)
       according to your favorite. Now available locales/encodings supported by &scim; are listed below
       <screen>zh_TW.Big5,zh_TW,zh_HK.Big5-HKSCS,zh_HK,zh_CN.GB18030,zh_CN.GBK,zh_CN.GB2312,zh_CN,
 ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       </para>
-      <warning><title>Warning:</title><para>some of these locales/encodings are not recommended to use, 
-      such as zh_CN.GB2312 (please use zh_CN instead), due to bugs in other 
+      <warning><title>Warning:</title><para>some of these locales/encodings are not recommended to use,
+      such as zh_CN.GB2312 (please use zh_CN instead), due to bugs in other
       applications/libraries (Xfree 86 etc.)</para></warning>
       <para>Besides all these locales/encodings listed above, most utf8 locales are also support. The built-in
       support locale only contains "en_US.UTF-8". So if you want to use other utf8 enabled locales (say fr_FR.UTF-8), please
@@ -461,11 +987,11 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       <step><para>Check the <guibutton>advanced</guibutton> checkbox;</para></step>
       <step><para>Replace the content in the combobox of "Supported unicode locales" with fr_FR.UTF-8;</para></step>
       <step><para>Click the <guibutton>Add</guibutton> button;</para></step>
-      <step><para>Do not forget to click the <guibutton>Apply</guibutton> 
+      <step><para>Do not forget to click the <guibutton>Apply</guibutton>
       (or <guibutton>Ok</guibutton>) button finally.</para></step>
       </procedure>
       <para>After adding the new utf8 locale, you should see fr_FR.UTF-8 in the drop down
-      menu of <guimenu>Supported unicode locales</guimenu> combobox. Please restart skim 
+      menu of <guimenu>Supported unicode locales</guimenu> combobox. Please restart skim
       after this modification (you can just exit X and reenter).</para>
       <para>For Fedora core 1 users, please add the
       same two export commands as above to the end of file /etc/X11/xinit/xinitrc.d/xinput.</para>
@@ -483,15 +1009,15 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
      <sect2 id="use-skim-as-default-panel" >
       <title>Use skim as the default panel</title>
       <para>
-      	If you prefer KDE/Qt interface and want scim to use skim as the default panel, 
+      	If you prefer KDE/Qt interface and want scim to use skim as the default panel,
         please execute.
         <screen><prompt>%</prompt><userinput><command>scim-panel-kde</command> -d -f </userinput></screen>
-        then please open the configure dialog (click the 
-	<guimenuitem>configure</guimenuitem> action) and go to 
+        then please open the configure dialog (click the
+	<guimenuitem>configure</guimenuitem> action) and go to
         <guimenu>Global Settings</guimenu> -> <guisubmenu>General SCIM</guisubmenu>,
-        change these settings as followings: 
+        change these settings as followings:
         <screen>
-              <guilabel>Panel Program: </guilabel><constant>scim-panel-kde</constant> 
+              <guilabel>Panel Program: </guilabel><constant>scim-panel-kde</constant>
               <guilabel>Config Module: </guilabel><constant>kconfig</constant></screen>
         These modifications are only required the first time you use &skim;.
       </para>
@@ -503,7 +1029,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
 	<screen><prompt>%</prompt><userinput><command>skim</command> -d</userinput></screen>
         (Please see also <xref linkend="faq-differ-skim-scim_panel_kde"/>)
       </para>
-      <para>If you want KDE invokes skim automatically when KDE session begins, please make sure that 
+      <para>If you want KDE invokes skim automatically when KDE session begins, please make sure that
       under <guimenu>Global Settings</guimenu> -> <guisubmenu>X Window</guisubmenu>, <guibutton>Start skim automatically when KDE starts</guibutton> checkbox is selected.
       </para>
     </sect2>
@@ -542,23 +1068,23 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       <title>Frequently asked questions</title>
       <qandaentry>
         <question>
-          <para>Question: Why do you bother to write &skim; now that &scim; 
+          <para>Question: Why do you bother to write &skim; now that &scim;
           already has a Gtk2 based panel?</para>
         </question>
         <answer>
-          <para>Ok, the most important reason is that: Nearly all applications 
-          running on my Desktop are KDE/Qt based ones, and &scim;'s panel was the 
+          <para>Ok, the most important reason is that: Nearly all applications
+          running on my Desktop are KDE/Qt based ones, and &scim;'s panel was the
           only exception, and it does not fit into the entire K Desktop Environment
           very well, so I decided to write a KDE/Qt panel for &scim;.</para>
-          <!--para>On the other hand, the Gtk2 panel has some disadvantages, which 
-          &skim; is designed to overcome, such as incapability of online 
+          <!--para>On the other hand, the Gtk2 panel has some disadvantages, which
+          &skim; is designed to overcome, such as incapability of online
           reconfiguration.</para-->
         </answer>
       </qandaentry>
       <qandaentry>
         <question>
           <para>Question: &scim; and &skim; are loaded successfully, and I can trigger
-	  input method and input CJK, but the inputed characters refuse to transfer 
+	  input method and input CJK, but the inputed characters refuse to transfer
 	  into target KDE/Qt applications.</para>
         </question>
         <answer>
@@ -576,7 +1102,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
         <answer>
           <para>Currently &skim; have almost all &scim; specific settings in its configuration
           dialog, with the only exception: the setting UI specific to a generic table is not
-          incorporated. So if you want to modify this kind of configuration, please use scim-setup. 
+          incorporated. So if you want to modify this kind of configuration, please use scim-setup.
           You can start it as:
           <screen>
           <prompt>%</prompt><userinput><command>scim-setup</command> -c kconfig</userinput>
@@ -590,7 +1116,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       </qandaentry>
       <qandaentry>
         <question id="faq-no-ims-in-list">
-          <para>Question: Why does the left click menu of the system tray icon contain 
+          <para>Question: Why does the left click menu of the system tray icon contain
           no input methods?</para>
         </question>
         <answer>
@@ -613,9 +1139,9 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
           I decided to rename it to &skim;.</para>
           <para>However, you still can find a program called scim-panel-kde in &skim; now. The
           difference between skim and scim-panel-kde is that: no matter what is set
-          in skim config dialog under "Global Settings -> Skim Plugins", the plugin 
+          in skim config dialog under "Global Settings -> Skim Plugins", the plugin
           "SCIM Server" won't get loaded by the latter program. In a word, scim-panel-kde
-          is meant to be used by scim-launcher to start skim automatically. 
+          is meant to be used by scim-launcher to start skim automatically.
           </para>
           <para>(You may want to have a look at the source of scim-panel-kde: it is in fact only
           a shell wrapper of the real skim program.)</para>
@@ -641,7 +1167,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
   </itemizedlist></para>
   <para>Translators:<itemizedlist>
   <listitem><para>German : Hendrik Brand
-          <email>eru_ZAI_gmx.li</email>, 
+          <email>eru_ZAI_gmx.li</email>,
           Jan Hefti
           <email>j.hefti_ZAI_hamburg.de</email></para>
   </listitem>
@@ -658,7 +1184,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
   (Please replace _ZAI_ with @ to retrieve the original Email address)
 	</para>
 	<para>
-	Documentation Copyright &copy; 2004 Liucougar (Liuspider) 
+	Documentation Copyright &copy; 2004 Liucougar (Liuspider)
 		<email>liuspider_ZAI_users.sourceforge.net</email>
 	</para>
 
@@ -669,17 +1195,17 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
 
 
 
-	
+
 	<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-	
+
 	&underFDL;               <!-- FDL: do not remove -->
-	
+
 	<!-- Determine which license your application is licensed under,
 	     and delete all the remaining licenses below:
-	
+
 	     (NOTE:  All documentation are licensed under the FDL,
 	     regardless of what license the application uses) -->
-	
+
 	&underGPL;               <!-- GPL License -->
 </chapter>
 </book>

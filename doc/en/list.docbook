@@ -1,27 +1,28 @@
 <chapter id="list" >
   <title>List of input languages</title>
-  
+    <para>The list with the current available input methods are shown here.</para>
   <para>
-    The list with the current available input methods are shown here.
-  </para>
    <itemizedlist>
-     <title>List of input methods supported by SCIM-tables-0.5.10</title>
+  <title>List of input methods supported by SCIM-tables-0.5.10</title>
       <listitem>
         <para>Amharic
           <itemizedlist> 
             <listitem>
-              <para>Am-sera</para>
+            <para> Am-sera</para>
             </listitem>              
           </itemizedlist>
         </para>              
       </listitem>
+      <listitem>
       <para>Arabic (Egypt)
           <itemizedlist>  
             <listitem>
               <para>Ar-kbd</para>
             </listitem>              
           </itemizedlist>
-        </para>  
+        </para>
+       </listitem>
+       <listitem>
           <para>Bengali
             <itemizedlist>
               <listitem>
@@ -31,7 +32,9 @@
                 <para>bn-probhat</para>
               </listitem>  
             </itemizedlist>
-           </para> 
+           </para>
+       </listitem>
+       <listitem>
            <para>Tibetan
               <itemizedlist>
                 <listitem>
@@ -45,13 +48,17 @@
                 </listitem>                  
                 </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Greek
               <itemizedlist>
                 <listitem>
                   <para>PolytonicGreek </para>
                 </listitem>                  
               </itemizedlist>
-              </para> 
+              </para>
+       </listitem>
+       <listitem>
            <para>Gujarati
               <itemizedlist>
                 <listitem>
@@ -61,14 +68,18 @@
                   <para>gu-phonetic</para>
                 </listitem>
               </itemizedlist>
-              </para> 
+              </para>
+       </listitem>
+       <listitem>
            <para>Hebrew
               <itemizedlist>
                  <listitem>
                   <para>pointedheb </para>
                 </listitem>                
               </itemizedlist>
-              </para> 
+              </para>
+       </listitem>
+       <listitem>
            <para>Hindi
               <itemizedlist>
                 <listitem>
@@ -81,7 +92,9 @@
                   <para>hi-inscript</para>
                 </listitem>                 
               </itemizedlist>
-              </para>    
+              </para>
+       </listitem>
+       <listitem>
              <para>Japanese
               <itemizedlist>  
                 <listitem>
@@ -95,6 +108,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Kannada
               <itemizedlist>
                 <listitem>
@@ -105,6 +120,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
                    <para>korean
               <itemizedlist>  
                 <listitem>
@@ -117,7 +134,9 @@
                   <para>hangul</para>
                 </listitem>  
               </itemizedlist>
-              </para>   
+              </para>
+       </listitem>
+       <listitem>
            <para>Malayalam
               <itemizedlist>  
                 <listitem>
@@ -127,7 +146,9 @@
                   <para>ml-phonetic</para>
                 </listitem>                  
               </itemizedlist>
-              </para>    
+              </para>
+       </listitem>
+       <listitem>
            <para>Marathi
               <itemizedlist>
                 <listitem>
@@ -135,6 +156,8 @@
                 </listitem>              
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Nepal
               <itemizedlist>
                 <listitem>
@@ -145,6 +168,8 @@
                 </listitem>                  
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Punjabi
               <itemizedlist>
                 <listitem>
@@ -161,6 +186,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
               <para>Russian
               <itemizedlist>
                 <listitem>
@@ -174,6 +201,8 @@
                 </listitem>  
               </itemizedlist>
              </para>
+       </listitem>
+       <listitem>
            <para>Tamil
               <itemizedlist>
                 <listitem>
@@ -189,14 +218,18 @@
                   <para>Tamil99  </para>
                 </listitem>
               </itemizedlist>
-              </para>         
+              </para>
+       </listitem>
+       <listitem>
            <para>Telugu
               <itemizedlist>
                 <listitem>
                   <para>te-inscript</para>
                 </listitem>              
               </itemizedlist>
-              </para>     
+              </para>
+       </listitem>
+       <listitem>
              <para>Thai
               <itemizedlist>
                 <listitem>
@@ -204,6 +237,8 @@
                 </listitem>
               </itemizedlist>
              </para>
+       </listitem>
+       <listitem>
            <para>Uighur
               <itemizedlist>
                 <listitem>
@@ -214,20 +249,26 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
              <para>Ukrainian
               <itemizedlist>
                 <listitem>
                   <para>Ua-Translit</para>
                 </listitem>
               </itemizedlist>
-             </para>              
+             </para>
+       </listitem>
+       <listitem>
              <para>Vietnamese
               <itemizedlist>  
                 <listitem>
                   <para>vi-viqr</para>
                 </listitem>
               </itemizedlist>
-             </para>            
+             </para>
+       </listitem>
+       <listitem>
              <para>Chinese (simplified)
               <itemizedlist>
                  <listitem>
@@ -243,7 +284,9 @@
                  <para>ziranma</para>
                 </listitem>
               </itemizedlist>
-             </para>        
+             </para>
+       </listitem>
+       <listitem>
              <para>Chinese (traditional)
               <itemizedlist>
                  <listitem>
@@ -260,7 +303,10 @@
                 </listitem>                  
                  <listitem>
                   <para>cangjie 5</para>
-                </listitem>                 
+                </listitem>
+                 <listitem>
+                  <para>SmartCangjie6</para>
+                </listitem>
                  <listitem>
                   <para>canton HK</para>
                 </listitem>
@@ -299,9 +345,13 @@
                 </listitem>
               </itemizedlist>
              </para>
+       </listitem>
    </itemizedlist>
+</para>
+<para>
     <itemizedlist>
      <title>List of input methods supported by M17N-DB-1.6.2</title>
+      <listitem>
         <para>Amharic
           <itemizedlist>  
             <listitem>
@@ -309,13 +359,17 @@
             </listitem>
           </itemizedlist>
         </para>
+       </listitem>
+       <listitem>
         <para>Armenian
           <itemizedlist>  
             <listitem>
               <para>hy-kbd</para>
             </listitem>
           </itemizedlist>
-        </para>        
+        </para>
+       </listitem>
+       <listitem>
         <para>Assamese
           <itemizedlist>  
             <listitem>
@@ -326,6 +380,8 @@
             </listitem>
           </itemizedlist>
         </para>
+       </listitem>
+       <listitem>
         <para>Belarusian
           <itemizedlist>  
             <listitem>
@@ -333,6 +389,8 @@
             </listitem>
           </itemizedlist>
         </para>
+       </listitem>
+       <listitem>
           <para>Bengali
             <itemizedlist>
               <listitem>
@@ -343,12 +401,15 @@
               </listitem>  
             </itemizedlist>
            </para>
+       </listitem>
+       <listitem>
         <para>Croatian
           <itemizedlist>
             <listitem>
               <para>hr-kbd</para>
             </listitem>
-          </itemizedlist>           
+          </itemizedlist>
+           </para>
         <para>Dakelh-canada
           <itemizedlist>
             <listitem>
@@ -356,6 +417,8 @@
             </listitem>
           </itemizedlist>
         </para>
+       </listitem>
+       <listitem>
         <para>Danish
           <itemizedlist>
             <listitem>
@@ -363,6 +426,8 @@
             </listitem>
           </itemizedlist>
         </para>
+       </listitem>
+       <listitem>
            <para>Dhivehi
               <itemizedlist>
                 <listitem>
@@ -370,6 +435,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Farsi
               <itemizedlist>
                 <listitem>
@@ -377,6 +444,8 @@
                 </listitem> 
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>French
               <itemizedlist>
                 <listitem>
@@ -384,6 +453,8 @@
                 </listitem> 
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Georgian
               <itemizedlist>
                 <listitem>
@@ -391,6 +462,8 @@
                 </listitem> 
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Greek
               <itemizedlist>
                 <listitem>
@@ -401,6 +474,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Gujarati
               <itemizedlist>
                 <listitem>
@@ -408,6 +483,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Hebrew
               <itemizedlist>
                 <listitem>
@@ -415,6 +492,8 @@
                 </listitem> 
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Hindi
               <itemizedlist>
                 <listitem>
@@ -425,6 +504,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Japanese
               <itemizedlist>
                 <listitem>
@@ -438,6 +519,8 @@
                 </listitem>                
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Kannada
               <itemizedlist>
                 <listitem>
@@ -445,6 +528,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Kazakhstan
               <itemizedlist>
                 <listitem>
@@ -455,6 +540,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Khmer
               <itemizedlist>
                 <listitem>
@@ -462,6 +549,8 @@
                 </listitem> 
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Korean
               <itemizedlist>
                 <listitem>
@@ -472,6 +561,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Lao
               <itemizedlist>  
                 <listitem>
@@ -482,13 +573,17 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
           <para>Malayalam
               <itemizedlist>  
                 <listitem>
                   <para>ml-itrans</para>
                 </listitem>              
               </itemizedlist>
-              </para>    
+              </para>
+       </listitem>
+       <listitem>
            <para>Myanmar
               <itemizedlist>
                 <listitem>
@@ -496,6 +591,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Oriya
               <itemizedlist>
                 <listitem>
@@ -503,6 +600,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Punjabi
               <itemizedlist>
                 <listitem>
@@ -510,6 +609,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
               <para>Russian
               <itemizedlist>
                 <listitem>
@@ -523,6 +624,8 @@
                 </listitem>
               </itemizedlist>
              </para>
+       </listitem>
+       <listitem>
            <para>Sanscrit
               <itemizedlist>
                 <listitem>
@@ -530,6 +633,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Serbian
               <itemizedlist>
                 <listitem>
@@ -547,6 +652,8 @@
                 </listitem>
               </itemizedlist>
              </para>
+       </listitem>
+       <listitem>
              <para>Slovak
               <itemizedlist>
                 <listitem>
@@ -554,6 +661,8 @@
                 </listitem>
               </itemizedlist>
              </para>
+       </listitem>
+       <listitem>
            <para>Swedish
               <itemizedlist>
                 <listitem>
@@ -561,6 +670,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Syriac
               <itemizedlist>
                 <listitem>
@@ -568,6 +679,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Tamil
               <itemizedlist>
                 <listitem>
@@ -578,13 +691,17 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Telugu
               <itemizedlist>
                 <listitem>
                   <para>te-itrans</para>
                 </listitem>
               </itemizedlist>
-              </para>     
+              </para>
+       </listitem>
+       <listitem>
            <para>Tai
               <itemizedlist>
                 <listitem>
@@ -598,6 +715,8 @@
                 </listitem>
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Tibetan
               <itemizedlist>
                 <listitem>
@@ -611,6 +730,8 @@
                 </listitem>
                 </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
            <para>Uyghur
               <itemizedlist>
                 <listitem>
@@ -618,6 +739,8 @@
                 </listitem>              
               </itemizedlist>
               </para>
+       </listitem>
+       <listitem>
              <para>Vietnamese
               <itemizedlist>
                 <listitem>
@@ -640,6 +763,8 @@
                 </listitem>
               </itemizedlist>
              </para>
+       </listitem>
+       <listitem>
              <para>Chinese-simplified
               <itemizedlist>
                 <listitem>
@@ -652,7 +777,7 @@
                   <para>zh-py-b5</para>
                 </listitem>                
                  <listitem>
-                  <para>zh-pu-gb</para>
+                  <para>zh-py-gb</para>
                 </listitem>
                  <listitem>
                   <para>zh-bopomofo</para>
@@ -673,70 +798,8 @@
                   <para>zh-quick</para>
                 </listitem>
               </itemizedlist>
-             </para>             
-             
-             
-             
-   </itemizedlist> 
+            </para>
+            </listitem>
+      </itemizedlist> 
+    </para>
   </chapter>
-
-
-
-
-<!--
-     Chinese (simplified)
-     Chinese (traditional)
-     Other
-     
-     
-     korean-:
-     ko-han2
-     ko-romaja
-     korean
-
-     japanese-:
-     anthy
-    canna
-    ja-anthy
-    ja-tcode
-    ja-trycode
-    SKK
-
-chinese-simplified-:
-zh-pinyin
-zh-py
-zh-pu-gb
-zh-bopomofo
-zh-tonepy-gb
-zh-quick
-zh-py-b5
-zh-tonepy-b5
-zh-tonepy
-zh-cangjie
-smart-pingyin
-erbi
-erbi-qs
-wubi
-
-
-ziranma
-
-chinese-traditional-:
-wu
-http://wu-chinese.com/web/
-array30
-cns11643
-cangjie
-cangjie 3
-cangjie 5
-canton HK
-cantonese pingyin
-dayi3
-easy big
-jyutping
-quick
-symplex
-stroke 5
-zhuyin
-zhuyinbig  
--->
