@@ -139,9 +139,6 @@
     </mediaobject>
     </sect1>
   </chapter>
-
-&list;
-
 <chapter id="configuration">
 <title>Configuration of &skim;</title>
 <section id="opening">
@@ -184,7 +181,7 @@
 <para>If you want to use &skim; as an userinterface for SCIM, make sure that  <guilabel>Program for input-method</guilabel> <application>scim-panel-kde</application> and as  <guilabel>Config  Module</guilabel> <application>kconfig</application>are chosen.</para>
 <para>Click on  <guilabel>Advanced Settings</guilabel>, for making other changes.</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration9.png" /></imageobject></mediaobject></screenshot>
-<para>If you like that &skim; is used with each new started program, and you are using a Unicode-encoding  (for example with a new installation of SuSE Linux  the encoding <literal>de_DE.UTF-8</literal> is choosen ), add this in the field <guilabel>Supported Unicode Locales scim supports</guilabel>  and click on <guibutton>Ad</guibutton>.</para>
+<para>If you like that &skim; is used with each new started program, and you are using a Unicode-encoding  (for example with a new installation of SuSE Linux the encoding <literal>de_DE.UTF-8</literal> is choosen ), add this in the field <guilabel>Supported Unicode Locales scim supports</guilabel> and click on <guibutton>Ad</guibutton>.</para>
 <note><para>You can overwrite the default valuet <literal>en_US.UTF-8</literal>. It will not be deleted, until you have on <guibutton>Delete</guibutton> pushed. You can test the result by clicking on the small arrow on the right of combobox.</para></note>
 <para>The <guilabel>Socket Address</guilabel> and the <guilabel>Timeout</guilabel> is normally not needed to be changed.</para>
 </section>
@@ -206,7 +203,7 @@
 <section id="right_click_menu">
 <title>Right click menu</title>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration13.png" /></imageobject></mediaobject></screenshot>
-<para>You can decide here if in the right click menu a text appears, with this can the program &skim; final stopped, because.it is   not easy to switch to a normal German keyboard: after the programm has ended, and the programm can only started again by input <userinput><command>skim</command> <option>-d</option></userinput> .</para>
+<para>You can decide here if in the right click menu a text appears, with this can the program &skim; final stopped, because.it is not easy to switch to a normal German keyboard: after the programm has ended, and the programm can only started again by input <userinput><command>skim</command> <option>-d</option></userinput> .</para>
 </section>
 <section id="scimserver">
 <title>SCIM Server</title>
@@ -215,14 +212,14 @@
 <section id="intelligentespinyin1">
 <title>Intelligent Pinyin - General</title>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration14.png" /></imageobject></mediaobject></screenshot>
-<para>The next settings are for the inputmethod   <guilabel>Intelligent Pinyin</guilabel> what is described in the directory <xref linkend="chinese" endterm="tit:chinese" />.</para>
-<para>Take again the example <quote>xie zhongwen wenjian åäž­ææä»¶</quote>. This input exist of the three parts <quote>xie å</quote>, <quote>zhongwen äž­æ</quote> and <quote>wenjian æä»¶</quote>. If <guilabel>Auto combine phrase</guilabel> is switched on, then this three parts will be combined to the new phrase  <quote>åäž­ææä»¶</quote> ,  this combination will be shown directly at the next input for to be choosen. This is practical with names like for example <quote>æ±å ¡äž­åŸ·åäŒéå¹ŽäŒ</quote> to be connected with each other, because then it is not needed to collect the seperated parts.</para>
-<para>If  <guilabel>Match longer phrase</guilabel> is switched on, then will a uncomplete input extended to a complete valid expression.</para>
+<para>The next settings are for the inputmethod <guilabel>Intelligent Pinyin</guilabel> what is described in the directory <xref linkend="chinese" endterm="tit:chinese" />.</para>
+<para>Take again the example <quote>xie zhongwen wenjian 写中文文件</quote>. This input exist of the three parts <quote>xie 写</quote>, <quote>zhongwen 中文</quote> and <quote>wenjian 文件</quote>. If <guilabel>Auto combine phrase</guilabel> is switched on, then this three parts will be combined to the new phrase  <quote>写中文文件</quote> ,  this combination will be shown directly at the next input for to be choosen. This is practical with names like for example <quote>汉堡中德协会青年会</quote> to be connected with each other, because then it is not needed to collect the seperated parts.</para>
+<para>If <guilabel>Match longer phrase</guilabel> is switched on, then will a uncomplete input extended to a complete valid expression.</para>
 <para>If <guilabel>Show all keys</guilabel>.is switched on, should all entered but not yet converted characters be shown, or only the characters who belongs to the last expression.</para>
 <para>If <guilabel>Dynamic adjust</guilabel> is switched on, then will the latest used expression put higher on the list the next time.</para>
 <para>This field can be made  <guilabel>longer</guilabel> with a mouse click:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration15.png" /></imageobject></mediaobject></screenshot>
-<para>Here is the setting, until wich  <guilabel>Max. user phrase lenght</guilabel> self combined character combination (for example names) in must be stored in the table, so that it can be used next time quickly.</para>
+<para>Here is the setting, until wich <guilabel>Max. user phrase lenght</guilabel> self combined character combination (for example names) in must be stored in the table, so that it can be used next time quickly.</para>
 <para>The higher is set the <guilabel>Smart match level: </guilabel>, the better are normally the proposals in the selection List, but also need the computer more time to compose.</para>
 <para>The <guilabel>Dynamic sensitivity</guilabel> informs, how much the last entered expression are preferred, also the relation between the frequence of the last entered expression en the general freuquence of Chinese expressions.</para>
 <para><guilabel>Save user data in binary format</guilabel> define, if the user defined expressions and frequences must be stored in quicker loading binary format or in easier to change text format, If yhere is not the intention to change the table by hand, activate this option.</para>
@@ -230,16 +227,16 @@
 <section id="intelligentespinyin2">
 <title>Intelligent Pinyin - Pinyin</title>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration16.png" /></imageobject></mediaobject></screenshot>
-<para>If <guilabel>Use tone</guilabel> is switched on , then will the information from the tones from the independent syllables used at the converting. The information from the tones are keyed in with an American keyboard with <keycombo action="simul">&Shift;<keycap><replaceable>Zahl</replaceable></keycap></keycombo> , also as <keycap>!</keycap>, <keycap>"</keycap>, <keycap>#</keycap> and <keycap>$</keycap>. Normally are the intelligent selection algorithms without tone good enough.</para>
-<para>It is far more practical to switch on the option <guilabel>Allow incomplete  Pinyin</guilabel>. When switched on, it is enough to key in the initial sound of each syllable, for example  <quote>xzhwwj</quote> for <quote>åäž­ææä»¶</quote>.</para>
+<para>If <guilabel>Use tone</guilabel> is switched on , then will the information from the tones from the independent syllables used at the converting. The information from the tones are keyed in with an American keyboard with <keycombo action="simul">&Shift;<keycap><replaceable>numbers</replaceable></keycap></keycombo> , also as <keycap>!</keycap>, <keycap>"</keycap>, <keycap>#</keycap> and <keycap>$</keycap>. Normally are the intelligent selection algorithms without tone good enough.</para>
+<para>It is far more practical to switch on the option <guilabel>Allow incomplete  Pinyin</guilabel>. When switched on, it is enough to key in the initial sound of each syllable, for example  <quote>xzhwwj</quote> for <quote>写中文文件</quote>.</para>
 <para>Also you can decide, that you want to switch on <guilabel>Ambiguities</guilabel> , if it is differcult to hear the difference between the close related sounds from the official Chinese language.</para>
 </section>
 <section id="intelligentespinyin3">
 <title>Intelligent Pinyin - key's</title>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration17.png" /></imageobject></mediaobject></screenshot>
-<para>With the shortkey for  <guilabel>Full width punctuation</guilabel> can be switched between the input from full width punctuation (= The width of  Chinese characters, so Chinese letters) and half width (= the width of latin letters, so European letters) back and forth. On the same way is functioning the shortkey for <guilabel>Full width _letter</guilabel>.</para>
-<para><guilabel>mode switch</guilabel> means here, switching to the next input method(for example. Korean).  On the other hand means <guilabel>Chinese mode switch</guilabel> that switching between  the input of half width/full width/both mixed.</para>
-<para>The shortkey for <guilabel>Disable phrase</guilabel> allows you, to remove an expression  that is combined  by error from not to be combined characters , with as result that it does not show up on the selection list.</para>
+<para>With the shortkey for <guilabel>Full width punctuation</guilabel> can be switched between the input from full width punctuation (= The width of Chinese characters, so Chinese letters) and half width (= the width of latin letters, so European letters) back and forth. On the same way is functioning the shortkey for <guilabel>Full width _letter</guilabel>.</para>
+<para><guilabel>mode switch</guilabel> means here, switching to the next input method(for example. Korean). On the other hand means <guilabel>Chinese mode switch</guilabel> that switching between  the input of half width/full width/both mixed.</para>
+<para>The shortkey for <guilabel>Disable phrase</guilabel> allows you, to remove an expression  that is combined  by error from not to be combined characters, with as result that it does not show up on the selection list.</para>
 </section>
 </section>
 <section id="input-methods">
@@ -263,7 +260,7 @@
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration111.png" /></imageobject></mediaobject></screenshot>
 <para><guilabel>Show prompt</guilabel> sets,  if that associated with the entry letters are shown.</para>
 <para><guilabel>Show key hint</guilabel> sets, if at the moment of completion of a candidate from the selection list, there are still outstanding buttons.</para>
-<para>When you want a higher loading-speed for the inputmethods, and it is not important that you can not read directly the information in the table file's . Then you can store the user-table's in  <guilabel>Save user table in binary format</guilabel>.</para>
+<para>When you want a higher loading-speed for the inputmethods, and it is not important that you can not read directly the information in the table file's. Then you can store the user-table's in  <guilabel>Save user table in binary format</guilabel>.</para>
 <para>if <guilabel>Show the user defined phrases first</guilabel> is set, then will your own defined expressions always first presented in the selection list.</para>
 <para>On the same way <guilabel>Show longer phrases first</guilabel>takes care, that longer candidates are always shown first in the selection list.</para>
 </section>
@@ -273,27 +270,27 @@
 <para>In this tab, you set the sortcuts for the operation of the on the general tables based input methods.</para>
 <para>The first shortcut is for switching between the input of <guilabel>Full width characters</guilabel> (Chinese, Japanese, Korean) and characters in half width (European). Next you can decide how to switch between the input of <guilabel>Letters in full width</guilabel> and half width.</para>
 <para>With the shortcut  for  <guilabel>Modus change</guilabel>you can switch to the next (on general tables based) input-method's.</para>
-<para>Whith the both last shortcuts, you can  <guilabel>Add phrase</guilabel> in the existing tables or <guilabel>Delete phrase</guilabel>from the general tables.</para>
+<para>Whith the both last shortcuts, you can <guilabel>Add phrase</guilabel> in the existing tables or <guilabel>Delete phrase</guilabel>from the general tables.</para>
 </section>
 </section>
 </section>
 </chapter>
 <chapter id="chinese">
-<title id="tit:chinese">Input Chinesischer characters with &skim;</title>
+<title id="tit:chinese">Input Chinese characters with &skim;</title>
 <para>You can start a program with <userinput>CN <command><replaceable>Programmname</replaceable></command></userinput>, for example
 <screen><prompt>%</prompt><userinput>CN <command>mozilla</command></userinput></screen>
-for to start the webbrowser Mozilla. Wenn Sie <keycombo action="simul">&Ctrl;<keycap>Space bar</keycap></keycombo> drÃŒcken, sollte folgende Symbolleiste erscheinen:</para>
+for to start the webbrowser Mozilla. When you press on <keycombo action="simul">&Ctrl;<keycap>Space bar</keycap></keycombo>, then should the next toolbar be seen:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar1.png" /></imageobject></mediaobject></screenshot>
-<para>When  <guilabel>Intelligent Pinyin</guilabel> not already automaticly is preset as input method, Make it just your choise from the list, that appears, after you have clicked on the name of  the input method, for example like this:</para>
+<para>When  <guilabel>Intelligent Pinyin</guilabel> not already automaticly is preset as input method, Make it just your choise from the list, that appears, after you have clicked on the name of the input method, for example like this:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_choose_ime.png" /></imageobject></mediaobject></screenshot>
 <para>Suppose, you want to input <quote>写中文文件</quote> . Therefor you write the pinyin of the first character <quote>xie</quote> (without indication of the tone):</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim01a.png" /></imageobject></mediaobject></screenshot>
 <para>The second character is correct, therefor you press on  <keycap>2</keycap>. When the character that you are looking for, does not show up immediately, then you can go through the list with the keys  <keycap>.</keycap> (point) and <keycap>,</keycap> (comma) to the right or to the left. The next both characters belongs together, so do not hesitate to put <quote>zhongwen</quote> in:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim02a.png" /></imageobject></mediaobject></screenshot>
-<para>With a <keycap>1</keycap> you choose the correct way of writing. As alternative you can insert the bleu underlined correct spelling in your text with the space bar .... With skim you can also put in longer word chains or even xomplete sentences. You can try for example <quote>xiezhongwenwenjian</quote>:</para>
+<para>With a <keycap>1</keycap> you choose the correct way of writing. As alternative you can insert the blue underlined correct spelling in your text with the space bar. With skim you can also put in longer word chains or even complete sentences. You can try for example <quote>xiezhongwenwenjian</quote>:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim04a.png" /></imageobject></mediaobject></screenshot>
-<para>Here are already the right characters after each other.If that was not the case,then you could choose with <keycap>4</keycap> the first character, and then with a other number the both next ones, and so on.</para>
-<para>As you have seen in the example above, it is also possible with skim to input traditional characters. For to force to get only half width (or full width) proposed, just click on  <guilabel>äž­</guilabel>, until the right characterlenght is reached:</para>
+<para>Here are already the right characters after each other. If that was not the case,then you could choose with <keycap>4</keycap> the first character, and then with a other number the both next ones, and so on.</para>
+<para>As you have seen in the example above, it is also possible with skim to input traditional characters. For to force to get only half width (or full width) proposed, just click on <guilabel>中­</guilabel>, until the right characterlenght is reached:</para>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar3.png" /></imageobject></mediaobject></screenshot>
 <screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar4.png" /></imageobject></mediaobject></screenshot>
 <para>With the other buttons you can set, that the space bar a half character or a full character is showing:</para>
@@ -891,6 +888,12 @@ The table  is made with information from this website:
 </para>
 </sect2>
 </sect1>
+</chapter>
+<chapter id="inputlist" >
+    <title>Overview of the available input methods</title>
+      <para>
+For an overview of the available input method's see this &list;.
+      </para>
 </chapter>
 <chapter id="installation" >
     <title>Installation</title>
