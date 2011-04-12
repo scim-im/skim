@@ -10,6 +10,7 @@
   <!ENTITY kappname "&skim;">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Dutch "INCLUDE" >
+ <!ENTITY lijst SYSTEM "list.docbook">
 ]>
 <book lang="&language;">
 
@@ -32,7 +33,7 @@
     <date>December/16/2006</date>
     <releaseinfo>&skim_version;-r&skim_doc_revision;</releaseinfo>
     <abstract>
-      <para>Een invoer methode platform gebaseert op 
+      <para>Een invoer methode platform gebaseert op
       <ulink url="http://scim.sourceforge.net">scim-lib</ulink> en een alles-in-een configureerbare GUI.</para>
     </abstract>
     <keywordset>
@@ -51,9 +52,9 @@
     &skim; is een invoer methode platform gebaseerd op scim-lib onder *NIX (inclusief
     <ulink url="http://www.gnu.org/gnu/the-gnu-project.html">GNU/Linux</ulink> en
     <ulink url="http://www.freebsd.org/">FreeBSD</ulink>)
-    systemen geoptimalizeerd voor &kde;. Het bezit een GUI paneel (genaamd scim-panel-kde), 
-    een KConfig configuratie module en Setup-dialogen voor zichzelf en scim-lib. 
-    Het heeft ook zijn eigen plugin systemen die op verzoek laadbare actie's ondersteunen. 
+    systemen geoptimalizeerd voor &kde;. Het bezit een GUI paneel (genaamd scim-panel-kde),
+    een KConfig configuratie module en Setup-dialogen voor zichzelf en scim-lib.
+    Het heeft ook zijn eigen plugin systemen die op verzoek laadbare actie's ondersteunen.
     </para>
     <sect1 id="features" >
       <title>Functies</title>
@@ -61,21 +62,21 @@
       <listitem><para>
       Overeenkomstig de KDE-standaarden:
       <itemizedlist>
-      <listitem><para>De standaard instellingen worden verkregen van KDE en de GUI volgt 
+      <listitem><para>De standaard instellingen worden verkregen van KDE en de GUI volgt
       de algemene stijl van KDE/Qt, inclusief (maar niet beperkt tot) tot het uiterlijk en kleuren van elementen en iconen;</para>
       </listitem>
-      <listitem><para>De gebruikte taal in de menu's word bepaald door de algemene instelling van KDE, en niet door een omgevings-variabele zoals LANG, dus onafhankelijk van de locale-instellingen kan de gewenste menu-taal gekozen worden. Skim komt zelfs met een handvol vertalingen, op dit moment inclusief: (Versimpeld/Traditioneel) 
+      <listitem><para>De gebruikte taal in de menu's word bepaald door de algemene instelling van KDE, en niet door een omgevings-variabele zoals LANG, dus onafhankelijk van de locale-instellingen kan de gewenste menu-taal gekozen worden. Skim komt zelfs met een handvol vertalingen, op dit moment inclusief: (Versimpeld/Traditioneel)
       Chinees, Duits, Japans, Koreaans en Nederlands.</para>
       </listitem>
       </itemizedlist>
       </para></listitem>
       <listitem><para>
-      Volledige &kde; integratie: indien &kde; wordt gesloten terwijl &skim; nog niet is gestopt (indien KDE zo is ingesteld om de sessies te bewaren wanneer U uitlogt), 
-      zal bij de volgende keer dat wordt ingelogd in &kde;, &skim; automatisch worden geladen; 
+      Volledige &kde; integratie: indien &kde; wordt gesloten terwijl &skim; nog niet is gestopt (indien KDE zo is ingesteld om de sessies te bewaren wanneer U uitlogt),
+      zal bij de volgende keer dat wordt ingelogd in &kde;, &skim; automatisch worden geladen;
       Na installatie van &skim;, kan het gestart worden via "KDE Menu->Utilitis->&skim;"
       </para></listitem>
       <listitem><para>
-      Volledig aanpasbaar: &skim; is inclusief een setup-menu, hierin kan niet alleen alle instellingen van &skim; maar ook van &scim; en de meeste instellingen hebben onmiddelijk invloed zonder de moeite van het opnieuw starten (alleen zelden gebruikte instellingen kunnen niet veranderd worden in &skim;, lees ook 
+      Volledig aanpasbaar: &skim; is inclusief een setup-menu, hierin kan niet alleen alle instellingen van &skim; maar ook van &scim; en de meeste instellingen hebben onmiddelijk invloed zonder de moeite van het opnieuw starten (alleen zelden gebruikte instellingen kunnen niet veranderd worden in &skim;, lees ook
       <xref linkend="faq-no-scim-settings"/>);
       </para></listitem>
       <listitem><para>
@@ -126,6 +127,760 @@
     </mediaobject>
     </sect1>
   </chapter>
+<chapter id="configuration">
+<title>Configuratie van &skim;</title>
+<section id="opening">
+<title>Openen van het configuratie-venster</title>
+<para>Veel aspecten van  &skim; kunnen naar wens ingesteld worden. Ga daarvoor naar het contextmenu, klik dan met de <mousebutton>rechts</mousebutton> op het symbool van &skim; (<inlinemediaobject><imageobject><imagedata format="PNG" fileref="skim24c.png" /></imageobject></inlinemediaobject>) in het configuratie gedeelte van het contextmenu.</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_contextmenu.png" /></imageobject></mediaobject></screenshot>
+<para>Kies hier het menu-item <guimenuitem>Instellen van SCIM</guimenuitem> en gan naar het configuratie-scherm.</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration1.png" /></imageobject></mediaobject></screenshot>
+<para>Klik hier op het <guilabel>+</guilabel>-symbool links van de lijst om alle configuratie-mogelijkheden te zien:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration2.png" /></imageobject></mediaobject></screenshot>
+</section>
+<section id="global">
+<title>Algemene instellingen</title>
+<section id="qtimmodule">
+<title>Qt Immodule</title>
+<para>Aan de rechterkant is de keuze te zien dat &skim; gebruikt de invoermethode van de Qt-bibliotheek. Deze keuze is alleen relevant als een Qt-bibliotheek is geïnstalleerd die QT-im module's kan ondersteunen. Als onbekend is wat dit is, volg dan deze praktische tip: als bij een programma &skim; niet gebruikt kan worden, schakel dan deze optie uit, laat het in de andere gevallen gewoon ingeschakeld.</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration2.png" /></imageobject></mediaobject></screenshot>
+</section>
+<section id="xwindows">
+<title>X Windows</title>
+<para>Klik op <guilabel>X Windows</guilabel> aan de linkerkant van van de volgende configuratie-scherm:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration3.png" /></imageobject></mediaobject></screenshot>
+<para>Als  <guilabel>On the Spot</guilabel> is ingeschakeld, dan zal de gekozen invoermethode direkt te zien zijn in de bewerkte tekst.Sommige programma's (bijvoorbeeld  OpenOffice.org) ondersteunen dit niet: schakel dan dit uit.</para>
+<para> Met de <guilabel>Sneltoetsen</guilabel> (hier: <keycombo action="simul">&Ctrl;<keycap>spatie</keycap></keycombo>) kan de invoermethode &skim;, IN- en UITgeschakeld worden,schakel bijvoorbeeld tussen Nederlandse en Chinese tekst. De vooringestelde sneltoetsen kunnen veranderd worden, als je op de drie puntjes klikt, opent een ander venster:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration4.png" /></imageobject></mediaobject></screenshot>
+<para>Click on <guilabel>...</guilabel>, waar een nieuwe toets-combinatie ingesteld kan worden:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration5.png" /></imageobject></mediaobject></screenshot>
+<para>Nadat de gewenste toetsen zijn  gekozen en de instellingen zijn opgeslagen, kan de volgende smeltoets toegevoegd, verandert of verwijderd worden:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration6.png" /></imageobject></mediaobject></screenshot>
+<para>Op dezelfde manier kan een sneltoets gemaakt worden, hiermee kan men naar de volgende input-methode schakelen (zoals bijvoorbeeld van <guilabel>Intelligent Pinyin</guilabel> naar <guilabel>Katakana</guilabel>) of terug naar de vorige input-methode.</para>
+</section>
+<section>
+<title>Componenten van &skim;</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration7.png" /></imageobject></mediaobject></screenshot>
+<para>In het volgende venster kan een keuze gemaakt worden welke onderdelen van  &skim;  IN- of UIT-geschakeld worden. Normaal hoeft hier niets verandert te worden; gebruik in plaats daarvan de radiobuttons .</para>
+</section>
+<section id="global-settings">
+<title id="title:global-settings">SCIM Algemene instellingen</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration8.png" /></imageobject></mediaobject></screenshot>
+<para>Als U  &skim; wilt gebruiken als interface voor SCIM, draag dan zorg voor dat zowel <guilabel>Paneel Program</guilabel> <application>scim-panel-kde</application> en  <guilabel>Config  Module</guilabel> <application>kconfig</application> gekozen zijn.</para>
+<para>Klik op  <guilabel>Geadvanceerde instellingen</guilabel>, voor andere instellingen.</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration9.png" /></imageobject></mediaobject></screenshot>
+<para>Als gewenst is dat  &skim; wordt gebruikt bij elk programma dat gestart wordt en de Unicode-codering wordt gebruikt  (bijvoorbeeld bij een nieuwe installatie van SuSE Linux  is  als codering <literal>nl_NL.UTF-8</literal> gekozen ), voeg deze dan toe in het veld  <guilabel>Ondersteunde Regionale Unicode-instellingen</guilabel>  en klik vervolgens op <guibutton>Toevoegen</guibutton>.</para>
+<note><para>De standaardwaarde  <literal>en_US.UTF-8</literal> kan overschreven worden. Het wordt niet verwijderd,  totdat op de knop <guibutton>Verwijderen</guibutton>  is gedrukt. Het resultaat kan getest worden door op de smalle pijl aan de rechterkant van de combobox te klikken.</para></note>
+<para>De <guilabel>Socket Addres</guilabel> en de <guilabel>Timeout</guilabel> hoeven normaal niet veranderd te worden.</para>
+</section>
+</section>
+<section id="inputwindow">
+<title>Invoervenster</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration10.png" /></imageobject></mediaobject></screenshot>
+<para>Hier kan gekozen worden of de opzoektabel horizontaal (standaard) of vertikaal getoond wordt, en of deze stand altijd moet vasthouden, onafhankelijk van hoe de tekst wordt ingevoerd..</para>
+<para>Ook kunnen lettertypes gekozen worden, bijvoorbeeld die gebruikt worden in het invoer-venster:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration11.png" /></imageobject></mediaobject></screenshot>
+</section>
+<section id="toolbar">
+<title>Werkbalk</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration12.png" /></imageobject></mediaobject></screenshot>
+<para>Hier kan gekozen worden wat wordt getoond in de werkbalk.</para>
+<para>De andere keuzes in bijvoorbeeld de volgende werkbalk:
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar1.png" /></imageobject></mediaobject></screenshot></para>
+</section>
+<section id="right_click_menu">
+<title>Rechts klik menu</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration13.png" /></imageobject></mediaobject></screenshot>
+<para>Hier kan besloten worden dat in het rechts klik menu een tekst verschijnt waarmee het programma  &skim; uiteindelijk stopt, omdat het niet zo makkelijk is om te wisselen naar naar een normaal Nederlands toetsenbord nadat het programma is gestopt en het programma kan alleen weer gestart worden met het volgende commando <userinput><command>skim</command> <option>-d</option></userinput> .</para>
+</section>
+<section id="scimserver">
+<title>SCIM Server</title>
+<section id="intelligentespinyin">
+<title>Intelligent Pinyin</title>
+<section id="intelligentespinyin1">
+<title>Intelligent Pinyin - Algemeen</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration14.png" /></imageobject></mediaobject></screenshot>
+<para>De volgende instellingen zijn voor de invoermethode  <guilabel>Intelligent Pinyin</guilabel> , welke wordt beschreven in het hoofdstuk <xref linkend="Chinees" endterm="tit:chinese" />.</para>
+<para>Neem opnieuw het voorbeeld  <quote>xie zhongwen wenjian 写中文文件</quote>. Deze invoer bestaat uit drie gedeeltes <quote>xie 写</quote>, <quote>zhongwen 中文</quote> en <quote>wenjian 文件</quote>. Als <guilabel>Uitdrukkingen automatisch _combineren</guilabel> is ingeschakeld, dan zullen deze drie gedeeltes worden gecombineerd tot de nieuwe uitdrukking <quote>写中文文件</quote>, deze combinatie zal direct als keuze getoond worden bij de volgende invoer. Dit is handig bij namen zoals bijvoorbeeld <quote>汉堡中德协会青年会</quote> met elkaar te verbinden, zodat het niet meer nodig is om de aparte gedeeltes samen te stellen.</para>
+<para>Als <guilabel>Langere uitdrukkingen kiezen</guilabel> is ingeschakeld, dan zal een incomplete invoer uitgebreid worden naar een geldige complete uitdrukking.</para>
+<para>Als <guilabel>Alle toetscombinaties tonen</guilabel>.is ingeschakeld, dan zullen alle ingevoerde maar nog niet omgezette karakters worden getoond, of alleen de karakters die bij de laatste uitdrukking horen.</para>
+<para>Als <guilabel>Dynamisch aanpassen</guilabel> is ingeschakeld, dan zal de volgende keer de laatst gebruikte uitdrukking hoger op de lijst getoond worden.</para>
+<para>Dit veld kan met een muisklik <guilabel>langer</guilabel> gemaakt worden:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration15.png" /></imageobject></mediaobject></screenshot>
+<para>Hier kan ingesteld worden, tot welke <guilabel>Maximale lengte van de eigen gedefineerde pinyin uitdrukking:</guilabel> de zelf gecombineerde karakter combinatie's (bijvoorbeeld namen) kunnen worden bewaard in de tabel, zodat ze de volgende keer makkelijk opnieuw gebruikt kunnen worden.</para>
+<para>Hoe hoger het <guilabel>Intelligentie nivo van vergelijken:</guilabel> is ingesteld, dest te beter zijn de voorstellen in de selectielijst, maar de computer heeft dan ook meer tijd nodig voor het resultaat.</para>
+<para>De <guilabel>Dynamische gevoeligheid:</guilabel> geeft aan, hoeveel meer de laatste ingevoerde uitdrukking de voorkeur krijgt, dit is ook de relatie tussen de frequentie van het laatst ingevoerde uitdrukking en de algemene frequentie van Chinese uitdrukkingen.</para>
+<para>Als <guilabel>Eigen tabel in binair-formaat opslaan</guilabel> is ingeschakeld, dan zal de door de gebruiker opgegeven uitdrukkingen worden opgeslagen in het sneller te laden binaire tabel, anders wordt het opgeslagen in het makkelijker te bewerken tekst-formaat. Als er geen plannen zijn om het met de hand te veranderen, schakel dan dit in.</para>
+</section>
+<section id="intelligentespinyin2">
+<title>Intelligent Pinyin</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration16.png" /></imageobject></mediaobject></screenshot>
+<para>Als <guilabel>Tonen gebruiken</guilabel> is ingeschakeld , dan wordt de informatie over de tonen over de aparte lettergrepen gebruikt voor het omzetten. De informatie over de tonen worden ingetoetst op een Amerikaans toetsenbord met <keycombo action="simul">&Shift;<keycap><replaceable>Nummers</replaceable></keycap></keycombo> , en ook als <keycap>!</keycap>, <keycap>"</keycap>, <keycap>#</keycap> een <keycap>$</keycap>. Normaal kan de  intelligente selectie algoritme het ook zonder de tonen goed genoeg doen.</para>
+<para>Het is handiger om.<guilabel>Onvolledige pinyin toestaan</guilabel> in te schakelen. Wanneer dit is ingeschakeld, dan hoeft alleen nog de begingklanken van elke lettergreep ingetoetst te worden, bijvoorbeeld  <quote>xzhwwj</quote> voor <quote>写中文文件</quote>.</para>
+<para>Men kan ook beslissen, om bij <guilabel>Twijfelgevallen</guilabel> het in te schakelen, als het moeilijk is om de verschillen tussen op elkaar lijkende klanken van de officiëlle Chinese taal te horen.</para>
+</section>
+<section id="intelligentespinyin3">
+<title>Intelligent Pinyin - toetsen</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration17.png" /></imageobject></mediaobject></screenshot>
+<para>Met de sneltoets voor <guilabel>Leesteken in volle breedte</guilabel> kan er heen en weer omgeschakeld worden tussen de invoer van leestekens in volle breedte (= De breedte van Chinese karakters, dus Chinese letters) en halve breedte (= de breedte van latijnse letters, dus Europeese letters). Op dezelfde manier werkt de sneltoets voor <guilabel>Letters in volle/halve breedte</guilabel>.</para>
+<para><guilabel>Moduswissel</guilabel> betekent hier, omschakelen naar de volgende invoermethode (bijvoorbeeld Koreaans).  Maar <guilabel>Chinese Modus</guilabel> betekent het omschakelen tussen de invoer van halve breedte/ volle breedte/ gemengd.</para>
+<para>Met de sneltoets voor <guilabel>Uitdrukking uitschakelen</guilabel> kan een per ongeluk gecombineerde karakter (dat uit niet te combineren karakters toch is gecombineerd) worden verwijderd, zodat het niet meer verschijnt in de keuzelijst.</para>
+</section>
+</section>
+<section id="input-methods">
+<title>Invoermethode's</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration18.png" /></imageobject></mediaobject></screenshot>
+<para>Hier kan worden beslist welke (al geïnstalleerde) invoer-methode's zal worden gebruikt. Dit is handig wanneer alleen enkele invoer-methode's worden gebruikt, nu de niet gebruikte invoer-methode's zijn uitgeschakeld, kan er makkelijker tussen enkele werkelijk belangrijk invoer-methode's worden omgeschakeld. Klik op het <guilabel>+</guilabel>-teken, om de invoer-methode's die bij een taal horen te zien:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration19.png" /></imageobject></mediaobject></screenshot>
+</section>
+<section id="hangul">
+<title>Hangul</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration110.png" /></imageobject></mediaobject></screenshot>
+<para>Hier kan de instellingen voor de invoer-methode van <guilabel>scim-hangul</guilabel> (Koreaans) veranderd worden. wanneer <guilabel>Capslock gebruiken</guilabel> is ingeschakeld, dan kan de capslock gebruikt worden om de invoer heen en weer te schakelen tussen Hangul (lettergrepen) en Jamo ("letters").</para>
+<para>Als een toetsenbord wordt gebruikt met <guilabel>Dvorak-toetsenbord aanwezig</guilabel>, dan kan deze extra mogelijkheid worden ingeschakeld, zodat elke toets op een Qwery-toetsenbord toch normaal Koreaans ingetoetst kan worden.</para>
+<para>Als <guilabel>Toon commentaar over de kandidaten</guilabel> is ingeschakeld, dan is er uitleg voor elke uitdrukking in de keuzelijst.</para>
+<para>Ook kan de sneltoets voor het <guilabel>Aktiveren</guilabel> van de Koreaanse invoer-methode, voor het <guilabel>Omzetten van Hangul naar Hanja:</guilabel> (Chinese karakters) en de instelling voor het inschakelen van <guilabel>Manuel Mode</guilabel>..</para>
+</section>
+<section id="tabellen">
+<title>Algemene tabellen</title>
+<section id="tabels1">
+<title>Algemeen</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration111.png" /></imageobject></mediaobject></screenshot>
+<para>Als <guilabel>Prompt tonen</guilabel> is ingeschakeld, dan worden de woorden met de beginletter getoond.</para>
+<para>Als <guilabel>Toon toets aanwijzing</guilabel> is ingeschakeld, dat wanneer de keuze van een kandidaat uit de keuzelijst compleet is er nog uitstekende knoppen zijn.</para>
+<para>Als de invoer-methoden sneller geladen moeten worden, en het is niet belangrijk dat de tabel-bestanden niet rechtstreeks te lezen zijn. Dan kunt U Uw  <guilabel>Eigen tabel in binair-formaat opslaan</guilabel>.</para>
+<para>Als <guilabel>Eigen uitdrukkingen eerst tonen</guilabel> is ingeschakeld, dan worden de eigen uitdrukkingen altijd het eerst getoond in de keuzelijst.</para>
+<para>Als op dezelfde manier zorgt <guilabel>Lange uitdrukkingen eerst tonen</guilabel>ervoor, dat langere kandidaten altijd het eerst in de lijst worden getoond.</para>
+</section>
+<section id="tabels2">
+<title>Toetsenbord</title>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_configuration112.png" /></imageobject></mediaobject></screenshot>
+<para>In deze tab, kunnen de sneltoetsen ingesteld worden voor de bediening van de op de algemene tabellen gebaseerde invoermethoden.</para>
+<para>De eerste sneltoets is voor het omschakelen tussen de invoer van <guilabel>Leesteken in volle breedte</guilabel> (Chinees, Japans, Koreaans) en karakters in halve breedte (Europees). Vervolgens kan er besloten worden hoe tussen de invoer van <guilabel>Leestekens in volle breedte</guilabel> en in halve breedte omgeschakeld moet worden.</para>
+<para>Met de sneltoets voor <guilabel>Modus wissel</guilabel> kan er gewisseld worden naar de volgende (op een algemene tabellen gebaseerde) invoer-methode.</para>
+<para>Met beide laatste sneltoetsen, kan men een <guilabel>Uitdrukking toevoegen</guilabel> in de bestaande tabellen of <guilabel>Uitdrukking verwijderen</guilabel> van de algemene tabellen.</para>
+</section>
+</section>
+</section>
+</chapter>
+<chapter id="chinese">
+<title id="tit:chinese">Invoer Chinese karakters met &skim;</title>
+<para>Een programma kan gestart worden met <userinput>CN <command><replaceable>Programmname</replaceable></command></userinput>, bijvoorbeeld om de <screen><prompt>%</prompt><userinput>CN <command>mozilla</command></userinput></screen>
+om de webbrowser Mozilla te starten. Wanneer op de <keycombo action="simul">&Ctrl;<keycap>Spatie balk</keycap></keycombo> wordt gedrukt, dan zal de volgende werkbalk verschijnen:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar1.png" /></imageobject></mediaobject></screenshot>
+<para>Wanneer <guilabel>Intelligent Pinyin</guilabel> niet al automatisch is ingesteld als invoer-methode, kies het dan uit de lijst dat verschijnt nadat er op de naam van de invoer-methode is geklikt, bijvoorbeeld zoals hier:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_choose_ime.png" /></imageobject></mediaobject></screenshot>
+<para>Stel, men wil <quote>写中文文件</quote> invoeren. daarom wordt het pinyin van de eerste karakter <quote>xie</quote> geschreven (zonder opgave van de toon):</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim01a.png" /></imageobject></mediaobject></screenshot>
+<para>THet tweede karakter is de juiste, daarom drukt men op <keycap>2</keycap>. Wanneer het gezochte karakter niet snel wordt gevonden, dan kan men door de lijst gaan met de toetsen <keycap>.</keycap> (punt) and <keycap>,</keycap> (komma) naar rechts of naar links. De beide volgende karakters horen bij elkaar, twijfel daarom niet om <quote>zhongwen</quote> in te voeren:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim02a.png" /></imageobject></mediaobject></screenshot>
+<para>Met een <keycap>1</keycap> kan de juiste manier van schrijven gekozen worden. Als alternatief kan de blauw onderlijnde zojuist geselecteerde woord in de tekst geinsert worden met de spatie-balk. Met skim kunnen ook langere woord combinatie's of zelfs komplete zinnen ingevoerd worden. Probeer als voorbeeld <quote>xiezhongwenwenjian</quote>:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim04a.png" /></imageobject></mediaobject></screenshot>
+<para>Hier zijn al de juiste karakters al achter elkaar. Als dat niet geval is, dan kan met <keycap>4</keycap> het eerste karakter gekozen kunnen worden, en dan met een ander nummer de volgende, enzovoort.</para>
+<para>Zoals in het boven getoonde voorbeeld, is het ook mogelijk met skim om traditionele karakters in te voeren. Om alleen halve breedte (of volle breedte) te krijgen, klik op <guilabel>中­</guilabel>, totdat de juiste karakterlengte is bereikt:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar3.png" /></imageobject></mediaobject></screenshot>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar4.png" /></imageobject></mediaobject></screenshot>
+<para>Met de andere knoppen kan ingesteld worden, dat de spatie balk een halve karakter of een volle karakter toont:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar6.png" /></imageobject></mediaobject></screenshot>
+<para>en of een Chinees of een Europees leesteken wordt ingevoerd:</para>
+<screenshot><mediaobject><imageobject><imagedata format="PNG" fileref="skim_toolbar8.png" /></imageobject></mediaobject></screenshot>
+</chapter>
+<chapter id="background">
+ <title>Achtergrond van enkele Oost Aziatische invoermethode's</title>
+<sect1>
+<title>Koreaans</title>
+<sect2>
+ <title>ko-hanja</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese karakters in te voeren (gebruikt in Korea en Hanja genaamd) met een Koreaans toetsenbord.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Hanja/"><citetitle>Wikipedia.org/Hanja</citetitle></ulink>
+op wikipedia of deze pagina
+<ulink url="http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/"><citetitle>http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Hanja.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>hangul</title>
+<para>
+Deze invoermethode wordt gebruikt om Koreaanse tekens (Hangul genaamd) in te voeren met een Koreaans toetsenbord.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Hangul/"><citetitle>wikipedia.org/wiki/Hangul</citetitle></ulink>
+op wikipedia of deze pagina
+<ulink url="http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/"><citetitle>http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel en door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Hangul.bin</filename>
+en op
+<filename class='directory'>/usr/share/m17n/ko-han2.mim</filename>.
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/</citetitle></ulink>
+en op deze website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html/"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>ko romaja</title>
+<para>
+Deze invoermethode wordt gebruikt om Koreaanse tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Koreaans teken (overeenkomstig met Romaja schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Koreaans karakter.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Romanization_of_Korean/"><citetitle>wikipedia.org/wiki/Romanization_of_Korean</citetitle></ulink>
+op wikipedia of deze pagina
+<ulink url="http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/"><citetitle>http://www.ngohaibac.com/special-korean-input-method-hangul-romaja/</citetitle></ulink>
+op wikipedia.
+Deze invoer-methode wordt ondersteund door een scim-tabel en door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/HangulRomaja.bin</filename>
+en op
+<filename class='directory'>/usr/share/m17n/ko-romaja.mim</filename>.
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ko/</citetitle></ulink>
+en op deze website:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html/"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Japans</title>
+<sect2>
+<title>Hiragana</title>
+<para>
+Deze invoermethode wordt gebruikt om Japanse Hiragana tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Japanse teken, waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Japans teken.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Hiragana"><citetitle>wikipedia.org/wiki/Hiragana</citetitle></ulink>
+op wikipedia of deze pagina
+<ulink url="http://japanese.about.com/library/blhiragana.htm"><citetitle>http://japanese.about.com/library/blhiragana.htm/</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Hiragana.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>Katakana</title>
+<para>
+Deze invoermethode wordt gebruikt om Japanse Katakana tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Japanse teken, waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Japans teken.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Katakana"><citetitle>wikipedia.org/wiki/Katakana</citetitle></ulink>
+op wikipedia of op deze pagina
+<ulink url="http://japanese.about.com/library/blkatakana1.htm"><citetitle>http://japanese.about.com/library/blkatakana1.htm/</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Katakana.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>Nippon</title>
+<para>
+Deze invoermethode wordt gebruikt om Japanse Kanji tekens in te voeren met een Europees-toetsenbord, of met Kana.
+De woorden worden ingetoetst als een transcriptie van het Japanse teken, waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Japans teken.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Kanji"><citetitle>wikipedia.org/wiki/Kanji</citetitle></ulink>
+op wikipedia.
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Nippon.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/ja/</citetitle></ulink>
+De tabel bevat 6.355 tekens en is gemaakt met informatie van deze website:
+<ulink url="http://www.csse.monash.edu.au/~jwb/kanjidic.html"><citetitle>www.csse.monash.edu.au/~jwb/kanjidic.htm</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>ja-anty</title>
+<para>
+Deze invoermethode wordt gebruikt om Japanse Katakana tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Japanse teken, waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Japans Hiragana teken,
+dit wordt dan vertaald van Hiragana naar een gemengde Kanji-Hiragana zin.
+Voor meer informatie, lees deze pagina
+<ulink url="http://sourceforge.jp/projects/anthy/"><citetitle>sourceforge.jp/projects/anthy</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/ja-anthy.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html/"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>ja-tcode</title>
+<para>
+Voor meer informatie, lees deze pagina in het Japans
+<ulink url="http://openlab.jp/tcode/"><citetitle>openlab.jp/tcode/</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/ja-tcode.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>ja-trycode</title>
+<para>
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/ja-trycode.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Chinees-versimpeld</title>
+<sect2>
+<title>erbi</title>
+<para>
+Voor meer informatie, lees deze pagina in het Chinees
+<ulink url="http://zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95"><citetitle>zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Erbi.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>erbi-qs</title>
+<para>
+Voor meer informatie, lees deze pagina in het Chinees
+<ulink url="http://zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95"><citetitle>zh.wikipedia.org/zh-tw/%E4%BA%8C%E7%AC%94%E8%BE%93%E5%85%A5%E6%B3%95</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Erbi-QS.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>SmartCangjie6</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen), die vervolgens geselecteerd kunnen worden.
+Van de Cangjie invoer methode wordt meestal gezegd dat het 6 generaties heeft gehad (meestal in het Engels "versie's" genoemd), elk is versie is een beetje incompatible met de vorige versie.
+Deze versie is generatie 6.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+op wikipedia of op deze pagina
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+of op deze pagina in het Chinees
+<ulink url="http://www.scj2000.net"><citetitle>http://www.scj2000.net/</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/SmartCangJie6.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>wubi</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord of een Chinees toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen) die vervolgens met het toetsenbord geselecteerd kunnen worden in de volgorde waarmee ze met de hand getekend worden.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Wubi_method"><citetitle>wikipedia.org/wiki/Wubi_method</citetitle></ulink>
+on wikipedia or on this page
+<ulink url="http://www.emacswiki.org/emacs/WritingChineseWithWuBi/"><citetitle>WritingChineseWithWuBi</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Wubi.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>ziranma</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+Van dit systeem wordt beweerd dat het met twee toetsaanslagen een karakter selecteerd en makkelijk te leren is.
+Voor meer informatie, lees deze pagina
+<ulink url="http://eyegene.ophthy.med.umich.edu/unicode/KeyboardLayouts/ZiRanMaPinYinKeyboard.html"><citetitle>KeyboardLayouts/ZiRanMaPinYinKeyboard</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Ziranma.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-bopomofo</title>
+<para>
+Deze invoermethode wordt gebruikt om Bopomofo tekens in te voeren met een Chinees-toetsenbord.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Bopomofo"><citetitle>wikipedia.org/wiki/Bopomofo</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-bopomofo.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-cangjie</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen), die vervolgens geselecteerd kunnen worden.
+Van de Cangjie invoer methode wordt meestal gezegd dat het 6 generaties heeft gehad (meestal in het Engels "versie's" genoemd), elk is versie is een beetje incompatible met de vorige versie.
+Deze versie is generatie een.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+op wikipedia, of op deze pagina
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-cangjie.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-pinyin</title>
+<para>
+Deze invoermethode wordt gebruikt om Pinyin (Chinees schrijven in een alphabet notitie) in te voeren, dit wordt niet omgezet in karakters.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin"><citetitle>wikipedia.org/wiki/Pinyin</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-pinyin.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-py</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan op alphabetische volgorde
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-py.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>zh-py-gb</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan op alphabetische volgorde, het resultaat wordt niet gecodeerd in UTF-8 maar in GB_2312.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+en op
+<ulink url="http://en.wikipedia.org/wiki/GB_2312"><citetitle>wikipedia.org/wiki/GB_2312</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-py-gb.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-py-b5</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan op alphabetische volgorde, het resultaat wordt niet gecodeerd in UTF-8 maar in BIG-5.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+en op
+<ulink url="http://en.wikipedia.org/wiki/Big5"><citetitle>wikipedia.org/wiki/Big5</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-py-b5.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-tonepy</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan niet alleen op alphabetische volgorde, maar ook op volgorde van de tonen.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-tonepy.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>zh-tonepy-b5</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan niet alleen op alphabetische volgorde, maar ook op volgorde van de tonen.
+Het resultaat wordt niet gecodeerd in UTF-8 maar in BIG-5.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+en op
+<ulink url="http://en.wikipedia.org/wiki/Big5"><citetitle>wikipedia.org/wiki/Big5</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-tonepy-b5.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>zh-tonepy-gb</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Pinyin schrijfwijze), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan niet alleen op alphabetische volgorde, maar ook op volgorde van de tonen.
+Het resultaat wordt niet gecodeerd in UTF-8 maar in GB_2312.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Pinyin_method"><citetitle>wikipedia.org/wiki/Pinyin_method</citetitle></ulink>
+en op
+<ulink url="http://en.wikipedia.org/wiki/GB_2312"><citetitle>wikipedia.org/wiki/GB_2312</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/zh-tonepy-gb.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zh-quick</title>
+<para>
+Deze invoer-methode wordt ondersteund door een m17n-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/m17n/quick.mim</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://www.m17n.org/m17n-lib-en/index.html"><citetitle>http://www.m17n.org/m17n-lib-en/index.html</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="http://www.unicode.org"><citetitle>http://www.unicode.org</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+<sect1>
+<title>Chinees-traditioneel</title>
+<sect2>
+<title>array30</title>
+<para>
+Voor meer informatie, lees deze pagina
+<ulink url="http://scimarray.openfoundry.org/index_en.html"><citetitle>scimarray.openfoundry.org/index_en.html</citetitle></ulink>
+of deze pagina (in Chinees)
+<ulink url="http://array30.sourceforge.net/"><citetitle>array30.sourceforge.net</citetitle></ulink>
+of deze pagina (in Chinees)
+<ulink url="http://www.array.com.tw/"><citetitle>www.array.com.tw</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Array30.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cns11643</title>
+<para>
+Voor meer informatie, lees deze pagina (in Chinees)
+<ulink url="http://www.cmex.org.tw"><citetitle>http://www.cmex.org.tw</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/CNS11643.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cangjie</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen), die vervolgens geselecteerd kunnen worden.
+Van de Cangjie invoer methode wordt meestal gezegd dat het 6 generaties heeft gehad (meestal in het Engels "versie's" genoemd), elk is versie is een beetje incompatible met de vorige versie.
+Deze versie is generatie een.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+op wikipedia, of op deze pagina
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Cangjie.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cangjie 3</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen), die vervolgens geselecteerd kunnen worden.
+Van de Cangjie invoer methode wordt meestal gezegd dat het 6 generaties heeft gehad (meestal in het Engels "versie's" genoemd), elk is versie is een beetje incompatible met de vorige versie.
+Deze versie is generatie drie.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+op wikipedia, of op deze pagina
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Cangjie3.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cangjie 5</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen), die vervolgens geselecteerd kunnen worden.
+Van de Cangjie invoer methode wordt meestal gezegd dat het 6 generaties heeft gehad (meestal in het Engels "versie's" genoemd), elk is versie is een beetje incompatible met de vorige versie.
+Deze versie is generatie vijf.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Cangjie_method"><citetitle>wikipedia.org/wiki/Cangjie_method</citetitle></ulink>
+op wikipedia, of op deze pagina
+<ulink url="http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles"><citetitle>http://www.cocoanutstech.com/cang_jie/www.cjmember.com/the_cj_method.htm#Basic%20Principles</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Cangjie5.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>canton HK</title>
+<para>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/CantonHK.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>cantonese pingyin</title>
+<para>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Cantonese.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>dayi3</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord of een Chinees toetsenbord.
+De Chinese tekens worden in stukken verdeeld (vaak overeenkomstig radikalen), die vervolgens met het toetsenbord geselecteerd kunnen worden in de volgorde waarmee ze met de hand getekend worden.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Dayi_method"><citetitle>wikipedia.org/wiki/Dayi_method</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Dayi3.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>easy big</title>
+<para>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/EZ-Big.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>jyutping</title>
+<para>
+Deze invoermethode wordt gebruikt om Kantonese karakters in te voeren met een Europees-toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met Jyutping schrijfwijze van het Kantonees), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+De karakters staan op alphabetische volgorde,
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Jyutping"><citetitle>wikipedia.org/wiki/Jyutping</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Jyutping.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>quick</title>
+<para>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Quick.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>symplex</title>
+<para>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Simplex.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>stroke 5</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een cijfer-toetsenbord of een Chinees toetsenbord.
+De Chinese tekens worden in stukken verdeeld (overeenkomstig met de vorm) die vervolgens met het toetsenbord geselecteerd kunnen worden in de volgorde waarmee ze met de hand getekend worden.
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Stroke_count_method"><citetitle>wikipedia.org/wiki/Stroke_count_method</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Stroke5.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+ <title>wu</title>
+<para>
+Deze invoermethode wordt gebruikt om Chinese tekens in te voeren met een Europees-toetsenbord of een Chinees toetsenbord.
+De woorden worden ingetoetst als een transcriptie van het Chinese karakter (overeenkomstig met de Shanhai uitspraak), waneer klaar, dan wordt dit opgezocht in een electronisch woordenboek en vertaalt naar een Chinees karakter.
+Voor meer informatie, lees deze pagina (in het Chinees)
+<ulink url="http://wu-chinese.com"><citetitle>wu-chinese.com</citetitle></ulink>
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/Wu.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zhuyin</title>
+<para>
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Zh%C3%B9y%C4%ABn_f%C3%BAh%C3%A0o"><citetitle>wikipedia.org/wiki/Zhuyin Fuhao</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/zhuyin.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="https://github.com/lukhnos/openvanilla-oranje"><citetitle>https://github.com/lukhnos/openvanilla-oranje</citetitle></ulink>
+</para>
+</sect2>
+<sect2>
+<title>zhuyinbig</title>
+<para>
+Dit is de uitgebreidere versie van zhuyin
+Voor meer informatie, lees deze pagina
+<ulink url="http://en.wikipedia.org/wiki/Zh%C3%B9y%C4%ABn_f%C3%BAh%C3%A0o"><citetitle>wikipedia.org/wiki/Zhuyin Fuhao</citetitle></ulink>
+op wikipedia
+Deze invoer-methode wordt ondersteund door een scim-tabel, die op de harde schijf van deze computer gevonden kan worden op
+<filename class='directory'>/usr/share/scim/tables/zhuyinbig.bin</filename>
+Het bron-bestand kan op deze website gevonden worden:
+<ulink url="http://scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh/"><citetitle>scim.svn.sourceforge.net/viewvc/scim/scim-tables/trunk/tables/zh</citetitle></ulink>
+De tabel is gemaakt dankzij informatie van deze website:
+<ulink url="https://github.com/lukhnos/openvanilla-oranje"><citetitle>https://github.com/lukhnos/openvanilla-oranje</citetitle></ulink>
+</para>
+</sect2>
+</sect1>
+</chapter>
+<chapter id="inputlist" >
+    <title>Overzicht van de beschikbare invoer methode's</title>
+      <para>
+Voor een overzicht van de beschibare invoer methode's, kijk in deze &lijst;.
+      </para>
+</chapter>
   <chapter id="installation" >
     <title>Installatie</title>
     <sect1 id="how-to-obtain-skim" >
@@ -140,21 +895,21 @@
       <para>
       	&scim; >= &require_scim_version;, &Qt; >= 3.2.0 en &kde; >= 3.2.0 zijn nodig om &skim;. te laten werken of te compileren
       </para>
-      <note><title>Letop:</title><para>Na het installeren van skim, moet ook minstens één IMEngine worden geïnstalleerd
+      <note><title>Letop:</title><para>Na het installeren van skim, moet ook minstens Ã©Ã©n IMEngine worden geÃ¯nstalleerd
       (verwijzend naar een invoer methode), zoals <emphasis>scim-chinese</emphasis>
-       (Bevat op dit moment Pinyin IMEngine voor Versimpeld Chinees), 
+       (Bevat op dit moment Pinyin IMEngine voor Versimpeld Chinees),
       <emphasis>scim-tabellen</emphasis> (bevat tabel-gebaseerde invoer methodes, zoals Wubi, Erbi voor Versimpeld Chinees),
       <emphasis>scim-hangul</emphasis> (een populaire Koreaanse invoer methode), <emphasis>scim-uim</emphasis> (bevat veel Japanse IMEngines) of <emphasis>scim-m17n</emphasis> (bevat meer dan 30 invoer methodes voor verschillende talen).</para></note>
       <sect2 id="binary_requirements" >
       <title>Het installeren van een (Binare) RPM</title>
-      <para>Als U &skim; direct wilt kunnen gebruiken, installeer dan RPM's 
+      <para>Als U &SKIM; direct wilt kunnen gebruiken, installeer dan RPM's
       voor scim en skim.</para>
       </sect2>
       <sect2 id="compile_from_source_requirements" >
       <title>Compileren van Bronbestanden</title>
-      <para>Als het gewenst is om &skim; vanuit een bronbestand te compileren, moet er voor gezorgd zijn dat voor het compileren van &skim; in ieder geval de RPM's voor scim en scim-devel zijn geïnstalleerd.</para>
+      <para>Als het gewenst is om &SKIM; vanuit een bronbestand te compileren, moet er voor gezorgd zijn dat voor het compileren van &skim; in ieder geval de RPM's voor scim en scim-devel zijn geÃ¯nstalleerd.</para>
       <para>Maar als &scim; al eerder op deze computer is gecompileerd, zijn alle benodigde bestanden aanwezig.</para>
-      <para>Indien de orginele op Gtk2 gebaseerde GUI van scim-lib niet gewenst zijn, kunnen deze uitgezet worden wanneer ze geconfigureerd worden: na het daaropvolgende compileren kan &skim; nog steeds geïnstalleerd worden;.
+      <para>Indien de orginele op Gtk2 gebaseerde GUI van scim-lib niet gewenst zijn, kunnen deze uitgezet worden wanneer ze geconfigureerd worden: na het daaropvolgende compileren kan &skim; nog steeds geÃ¯nstalleerd worden;.
 	Kortom, &skim; is niet afhankelijk van de orginele op Gtk2 gebaseerde GUI.
       </para>
       <para>De header bestanden voor &Qt; en &kde; zijn ook nodig om &skim; te kunnen compileren, deze zitten normaal in libqt-devel en libkdecore-devel/libkdelibs-devel RPMs.
@@ -180,7 +935,7 @@
       <para>
       	Voordat enige XIM server in X gebruikt kan worden, moet de omgeving worden ingesteld.
       </para>
-      <para>Eerst, voor Gentoo gebruikers, bewerk het bestand ~/.xinitrc (als het nog niet bestaat, creeer dit bestand), 
+      <para>Eerst, voor Gentoo gebruikers, bewerk het bestand ~/.xinitrc (als het nog niet bestaat, creeer dit bestand),
       en pas het aan overeenkomstig het voorbeeld hieronder
       <screen><userinput>export XMODIFIERS=@im=SCIM</userinput>
 <userinput>export LC_CTYPE="zh_CN.GBK"</userinput>
@@ -188,15 +943,15 @@
 <userinput>export QT_IM_MODULE=scim</userinput>
 <userinput><command>startkde</command></userinput></screen>
       De vierde lijn is alleen nodig als uw &Qt; is compileerd met
-      <ulink url="http://immodule-qt.freedesktop.org">qt-immodule</ulink> ondersteuning en 
-      <ulink url="http://scim.sf.net/">scim-qtimm</ulink> is geïnstalleerd. Onder Gentoo, please voeg de laatste Qt toe met USE="immqt-bc" (of USE="immqt" indien u bereid bent om alle op Qt gebaseerde aanwezige programma's opnieuw te compileren) en voeg vervolgens scim-qtimm toe. SuSE zal deze standaard toevoegen bij de komende versie. 
+      <ulink url="http://immodule-qt.freedesktop.org">qt-immodule</ulink> ondersteuning en
+      <ulink url="http://scim.sf.net/">scim-qtimm</ulink> is geÃ¯nstalleerd. Onder Gentoo, please voeg de laatste Qt toe met USE="immqt-bc" (of USE="immqt" indien u bereid bent om alle op Qt gebaseerde aanwezige programma's opnieuw te compileren) en voeg vervolgens scim-qtimm toe. SuSE zal deze standaard toevoegen bij de komende versie.
       </para>
       <para>Pas de locale/codering (zh_CN.GBK is gebruikt in het voorbeeld hierboven)
       overeenkomstig uw voorkeur. Alle locales/coderingen nu ondersteund door &scim; worden hieronder genoemd
       <screen>zh_TW.Big5,zh_TW,zh_HK.Big5-HKSCS,zh_HK,zh_CN.GB18030,zh_CN.GBK,zh_CN.GB2312,zh_CN,
 ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       </para>
-      <warning><title>Waarschuwing:</title><para>sommige van deze locales/coderingen worden niet aanbevolen om te gebruiken, 
+      <warning><title>Waarschuwing:</title><para>sommige van deze locales/coderingen worden niet aanbevolen om te gebruiken,
       zoals zh_CN.GB2312 (gebruik liever daarvoor in de plaats zh_CN), wegens programmeerfouten in andere programma's/bibiotheken (Xfree 86 enz.)</para></warning>
       <para>Naast de hierboven genoemde locales/coderingen, worden de meeste utf8 locales ook ondersteund. De ingebouwde locale heeft alleen "en_US.UTF-8". Als ook andere utf8 aangezette locales gewenst zijn (bijvoorbeeld fr_FR.UTF-8), volg dan de volgende procedures:</para>
       <procedure><title>Andere utf8 locales aanzetten in scim/skim</title>
@@ -209,11 +964,11 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       <step><para>Controleer <guibutton>advanced</guibutton> checkbox;</para></step>
       <step><para>Replace the content in the combobox of "Supported unicode locales" with fr_FR.UTF-8;</para></step>
       <step><para>Klik op <guibutton>Toevoegen</guibutton> knop;</para></step>
-      <step><para>Vergeet niet om te klikken op <guibutton>Toepassen</guibutton> 
+      <step><para>Vergeet niet om te klikken op <guibutton>Toepassen</guibutton>
       (of <guibutton>Ok</guibutton>) knop als laatste.</para></step>
       </procedure>
       <para>Na het toevoegen van de nieuwe utf8 locale, zou fr_FR.UTF-8 in het drop down
-      menu van <guimenu>Ondersteunde unicode locales</guimenu> combobox te zien moeten zijn. Herstart AUB skim 
+      menu van <guimenu>Ondersteunde unicode locales</guimenu> combobox te zien moeten zijn. Herstart AUB skim
       na deze aanpassing (Verlaat X en start het opnieuw).</para>
       <para>Voor Fedora core 1 gebruikers, voeg zoals hierboven de volgende twee export commando's aan het eind van het bestand /etc/X11/xinit/xinitrc.d/xinput.</para>
      </sect1>
@@ -230,15 +985,15 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
      <sect2 id="use-skim-as-default-panel" >
       <title>Gebruik van &skim; als standaard invoer panel</title>
       <para>
-      	Indien de voorkeur wordt gegeven aan de KDE/Qt interface en wilt dat &scim; als standaard paneel &skim; gebruikt, 
+      	Indien de voorkeur wordt gegeven aan de KDE/Qt interface en wilt dat &scim; als standaard paneel &skim; gebruikt,
         voer dan de volgende commando's uit.
         <screen><prompt>%</prompt><userinput><command>scim-panel-kde</command> -d -f </userinput></screen>
-        Open vervolgens het configuratie dialoog (klik op de  
-	<guimenuitem>configuratie</guimenuitem> knop) en ga naar 
+        Open vervolgens het configuratie dialoog (klik op de
+	<guimenuitem>configuratie</guimenuitem> knop) en ga naar
         <guimenu>Algemene instellingen</guimenu> -> <guisubmenu>Algemeen SCIM</guisubmenu>,
-        verander de instellingen als volgt: 
+        verander de instellingen als volgt:
         <screen>
-              <guilabel>Paneel Programma: </guilabel><constant>scim-panel-kde</constant> 
+              <guilabel>Paneel Programma: </guilabel><constant>scim-panel-kde</constant>
               <guilabel>Configuratie Module: </guilabel><constant>kconfig</constant></screen>
         Dit hoeft alleen de eerste keer ingesteld te worden dat &skim; gebruikt wordt.
       </para>
@@ -250,7 +1005,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
 	<screen><prompt>%</prompt><userinput><command>skim</command> -d</userinput></screen>
         (Lees ook <xref linkend="faq-differ-skim-scim_panel_kde"/>)
       </para>
-      <para>Indien het gewenst is dat KDE automatisch &skim; gebruikt wanneer een KDE sessie begint, zorg ervoor dat 
+      <para>Indien het gewenst is dat KDE automatisch &skim; gebruikt wanneer een KDE sessie begint, zorg ervoor dat
       onder <guimenu>Algemene instellingen</guimenu> -> <guisubmenu>X Window</guisubmenu>, <guibutton>Start skim automatisch wanneer KDE start</guibutton> checkbox is aangevinkt.
       </para>
     </sect2>
@@ -288,13 +1043,13 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
       <title>Vaak gestelde vragen</title>
       <qandaentry>
         <question>
-          <para>Vraag: Waarom heeft U de moeite genomen om  &skim; te programeren, als &scim; 
+          <para>Vraag: Waarom heeft U de moeite genomen om  &skim; te programeren, als &scim;
           al een Gtk2 gebaseerde paneel heeft?</para>
         </question>
         <answer>
           <para>Ok, de belangrijkste reden is de volgende: Bijna alle programma's die op mijn Desktop draaien zijn op KDE/Qt gebaseerd, en &scim;'s paneel was de enige uitzondering, en het paste daarom niet goed in het gehele K Desktop omgeving, daarom besloot ik om een KDE/Qt paneel te programmeren voor &scim;.</para>
-          <!--para>On the other hand, the Gtk2 panel has some disadvantages, which 
-          &skim; is designed to overcome, such as incapability of online 
+          <!--para>On the other hand, the Gtk2 panel has some disadvantages, which
+          &skim; is designed to overcome, such as incapability of online
           reconfiguration.</para-->
         </answer>
       </qandaentry>
@@ -312,7 +1067,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
           <para>Vraag: Hoe kan ik &scim; speciale instellingen aanpassen? Ik kan ze niet vinden in het configuratie dialoog.</para>
         </question>
         <answer>
-          <para>Op dit moment &skim; heeft bijna alle &scim; speciale instellingen in zijn configuratie dialoog, met als enige uitzondering: De speciale UI instelling voor een algemene tabel in niet opgenomen. Dus als dit soort instellingen verandert moeten worden, gebruik dan scim-setup. 
+          <para>Op dit moment &skim; heeft bijna alle &scim; speciale instellingen in zijn configuratie dialoog, met als enige uitzondering: De speciale UI instelling voor een algemene tabel in niet opgenomen. Dus als dit soort instellingen verandert moeten worden, gebruik dan scim-setup.
           Dit kan gestart worden door:
           <screen>
           <prompt>%</prompt><userinput><command>scim-setup</command> -c kconfig</userinput>
@@ -342,7 +1097,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
         <answer>
           <para>Voordat &skim; 0.9.0 bestond, werdt dit pakket scim-panel-kde genoemd. Maar toen dit pakket meer en meer mogelijkheden kreeg dan alleen maar een paneel voor &scim;, besloot ik om het de nieuwe naam &skim; te geven;.</para>
           <para>Maar, er kan nog steeds een programma met de naam scim-panel-kde in &skim; gevonden worden. Het verschil tussen skim en scim-panel-kde is dat: onafhankelijk wat is ingesteld in skim configuratie dialoog in "Global Settings -> Skim Plugins", de plugin "SCIM Server" wordt niet geladen door dit laatste programma. In het kort, scim-panel-kde
-          is bedoeld om gebruikt te worden door scim-launcher om skim automatisch te starten. 
+          is bedoeld om gebruikt te worden door scim-launcher om skim automatisch te starten.
           </para>
           <para>(Mischien wilt U de bron-bestanden van scim-panel-kde bekijken: eigenlijk is alleen  een shell wrapper voor het echte &skim; programma.)</para>
         </answer>
@@ -367,7 +1122,7 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
   </itemizedlist></para>
   <para>Translators:<itemizedlist>
   <listitem><para>Duits : Hendrik Brand
-          <email>eru_ZAI_gmx.li</email>, 
+          <email>eru_ZAI_gmx.li</email>,
           Jan Hefti
           <email>j.hefti_ZAI_hamburg.de</email></para>
   </listitem>
@@ -382,27 +1137,27 @@ ja_JP.eucJP,ja_JP.ujis,ja_JP,ko_KR.eucKR,ko_KR</screen>
   </listitem>
    <listitem><para>Nederlands : Ronald Stroethoff
           <email>stroet43_ZAI_zonnet.nl</email></para>
-  </listitem>  
+  </listitem>
 	</itemizedlist>
   (Vervang _ZAI_ door @ om het werkelijke Email-adres te verkrijgen)
 	</para>
 	<para>
-	Documentatie Copyright &copy; 2004 Liucougar (Liuspider) 
+	Documentatie Copyright &copy; 2004 Liucougar (Liuspider)
 		<email>liuspider_ZAI_users.sourceforge.net</email>
 	</para>
-	
+
 	<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-	
+
 	&underFDL;               <!-- FDL: do not remove -->
-	
+
 	<!-- Determine which license your application is licensed under,
 	     and delete all the remaining licenses below:
-	
+
 	     (NOTE:  All documentation are licensed under the FDL,
 	     regardless of what license the application uses) -->
-	
+
 	&underGPL;               <!-- GPL License -->
-	
+
 	</chapter>
 </book>
 <!--
